@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Case Study: Coaching That Ends With the Work Automated | JamesTech</title>
+<meta name="description" content="A global financial-services firm went from stalled vendor training to building their own automations. One 40-hour task now runs in minutes. Hands-on Power Platform coaching by Mark Lucas, JamesTech LLC." />
+<link rel="canonical" href="https://jamestech.com/case-study.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Case Study: Coaching That Ends With the Work Automated" />
+<meta property="og:description" content="A global financial-services firm went from stalled vendor training to building their own automations. One 40-hour task now runs in minutes." />
+<meta property="og:url" content="https://jamestech.com/case-study.html" />
+<meta property="og:image" content="https://jamestech.com/assets/jt-ai-icon-512.png" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/jt-ai-icon.png" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['Manrope', 'sans-serif'],
+          serif: ['"Instrument Serif"', 'serif'],
+          mono: ['"Space Grotesk"', 'monospace'],
+        },
+        colors: {
+          navy: '#0E2C6E', blue: '#2A66D6', blue2: '#1A48A6', lblue: '#4D8DF0',
+          gold: '#FFC836', gold2: '#FFB200', ink: '#0E1726', slate: '#5B6B86', mist: '#F4F7FC',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root { --line: rgba(14,44,110,0.10); --line2: rgba(14,44,110,0.18); --blue:#2A66D6; --navy:#0E2C6E; --gold:#FFC836; --gold2:#FFB200; }
+  html { scroll-behavior: smooth; }
+  body { background:#FFFFFF; color:#0E1726; font-family:'Manrope',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  ::selection { background: var(--gold); color: var(--navy); }
+
+  .jt-badge { border-radius:30%; background:linear-gradient(135deg,#1A48A6,#0E2C6E); display:inline-flex; align-items:flex-start; justify-content:center; flex:none; }
+  .jt-badge .jt { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-.04em; color:#fff; line-height:1; }
+  .jt-badge .jt-ai { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-.02em; color:#FFC836; line-height:1; }
+
+  .mono-label { font-family:'Space Grotesk',monospace; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.24em; color:var(--blue); }
+  .glass { background:#FFFFFF; border:1px solid var(--line); box-shadow:0 1px 2px rgba(14,44,110,0.04), 0 18px 40px -28px rgba(14,44,110,0.30); }
+  .soft-card { background:#FFFFFF; border:1px solid var(--line); box-shadow:0 1px 2px rgba(14,44,110,0.03); }
+  .aura { position:absolute; inset:0; pointer-events:none; }
+  .aura::before { content:''; position:absolute; width:560px; height:560px; left:-160px; top:-200px; background:radial-gradient(circle, rgba(42,102,214,0.12), transparent 60%); filter:blur(44px); }
+  .aura::after { content:''; position:absolute; width:520px; height:520px; right:-150px; bottom:-180px; background:radial-gradient(circle, rgba(255,200,54,0.14), transparent 60%); filter:blur(50px); }
+
+  .btn-gold { background:linear-gradient(180deg,var(--gold),var(--gold2)); color:var(--navy); font-weight:700; border-radius:10px; transition:transform .25s, box-shadow .25s, filter .25s; box-shadow:0 10px 30px -8px rgba(255,178,0,0.55); }
+  .btn-gold:hover { transform:translateY(-2px); filter:brightness(1.03); box-shadow:0 16px 40px -8px rgba(255,178,0,0.7); }
+  .btn-ghost { border:1px solid var(--line2); color:var(--navy); border-radius:10px; transition:background .25s, border-color .25s; }
+  .btn-ghost:hover { background:rgba(42,102,214,0.06); border-color:var(--blue); }
+
+  .quote { border-left:3px solid var(--gold); padding:4px 0 4px 22px; }
+  .stat-num { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-.02em; color:var(--navy); line-height:1; }
+  .reveal { opacity:0; filter:blur(6px); transform:translateY(20px); transition:all .9s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.active { opacity:1; filter:blur(0); transform:translateY(0); }
+  table.snap { width:100%; border-collapse:collapse; }
+  table.snap td { padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top; font-size:15px; }
+  table.snap td.k { color:var(--slate); font-family:'Space Grotesk',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.14em; width:38%; white-space:nowrap; }
+  table.snap tr:last-child td { border-bottom:none; }
+</style>
+</head>
+<body class="font-body antialiased">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="mt-4 glass rounded-xl flex items-center justify-between px-5 py-3">
+      <a href="/" class="flex items-center gap-3">
+        <span class="jt-badge w-9 h-9 pt-[5px]"><span class="jt text-[17px]">JT</span><span class="jt-ai text-[8px] ml-[2px] mt-[1px]">AI</span></span>
+        <span class="flex flex-col leading-none">
+          <span class="font-display font-bold text-navy text-[15px] tracking-tight">JamesTech</span>
+          <span class="font-body text-[9px] tracking-[0.16em] uppercase text-slate mt-[3px]">Since 2001</span>
+        </span>
+      </a>
+      <a href="https://api.leadconnectorhq.com/widget/booking/8qM4qb2DdQ9LVIua1APJ" target="_blank" rel="noopener" class="btn-gold text-sm px-4 py-2">Book the Audit</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative pt-36 pb-14 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-3xl mx-auto px-6">
+    <div class="reveal"><span class="mono-label">Case study &middot; Financial services</span></div>
+    <h1 class="reveal mt-6 font-display font-semibold tracking-tighter leading-[1.02] text-[34px] sm:text-[46px] text-navy">
+      Coaching that ends with the work <span class="font-serif italic font-normal text-blue">automated</span>.
+    </h1>
+    <p class="reveal mt-6 text-[18px] leading-relaxed text-ink/70">
+      A team had sat through vendor training and come away with little. Mark Lucas took a different path: hands-on coaching on the work they actually do every day. It grew into working side by side, automating their own tasks together. By the end, one task that took 40 hours by hand was running in minutes.
+    </p>
+  </div>
+</section>
+
+<!-- SNAPSHOT -->
+<section class="relative pb-4">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="reveal glass rounded-2xl p-2 sm:p-4">
+      <table class="snap">
+        <tr><td class="k">Client</td><td class="text-ink/85">Global financial-services firm (anonymized)</td></tr>
+        <tr><td class="k">Engagement</td><td class="text-ink/85">Hands-on Power Platform coaching and enablement</td></tr>
+        <tr><td class="k">Role</td><td class="text-ink/85">Lead coach and consultant, Mark Lucas</td></tr>
+        <tr><td class="k">Stack</td><td class="text-ink/85">Microsoft Power Platform &middot; 30 years on the Microsoft stack</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- THE STAT -->
+<section class="relative py-16">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="reveal grid sm:grid-cols-3 gap-4">
+      <div class="soft-card rounded-2xl p-6 text-center">
+        <div class="stat-num text-[40px]">~40 hrs</div>
+        <p class="mt-2 text-sm text-ink/60">to do the task by hand, before</p>
+      </div>
+      <div class="soft-card rounded-2xl p-6 text-center">
+        <div class="stat-num text-[40px] text-blue">Minutes</div>
+        <p class="mt-2 text-sm text-ink/60">to run it now, after</p>
+      </div>
+      <div class="soft-card rounded-2xl p-6 text-center">
+        <div class="stat-num text-[40px]">Built by<br>the team</div>
+        <p class="mt-2 text-sm text-ink/60">not handed over, so the skill stays</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BODY -->
+<section class="relative pb-8">
+  <div class="max-w-2xl mx-auto px-6 space-y-12">
+
+    <div class="reveal">
+      <span class="mono-label">The approach</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">Coach on real work, not demos.</h2>
+      <div class="mt-5 space-y-4 text-ink/75 text-[16px] leading-relaxed">
+        <p>The team had been talked at for hours in earlier vendor training and built almost nothing. Mark flipped it. Every session used their actual workflows, hands on keyboard from the first minute. No slides, no hypotheticals.</p>
+        <p>It grew from there. What started as scheduled sessions turned into Mark working side by side with people, sitting with each one and automating the tasks that were quietly eating their week. The coaching and the building were the same activity.</p>
+      </div>
+      <blockquote class="reveal quote mt-6 text-ink/80 italic text-[17px] leading-relaxed">
+        "Their earlier training from a major software vendor stalled on technical issues. We spent the whole session troubleshooting instead of learning to build."
+        <span class="block not-italic mt-2 text-sm text-slate">— Process engineer, global financial-services firm</span>
+      </blockquote>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">The result</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">They built it, so they own it.</h2>
+      <div class="mt-5 space-y-4 text-ink/75 text-[16px] leading-relaxed">
+        <p>By the end of the engagement, team members were building and deploying their own automations instead of waiting on a small internal platform team. One task makes the point. A complex, recurring job that used to take roughly 40 hours by hand now finishes in minutes, and the person who runs it built it during the coaching.</p>
+      </div>
+      <blockquote class="reveal quote mt-6 text-ink/80 italic text-[17px] leading-relaxed">
+        "This used to take me about 40 hours by hand. Now it runs in minutes."
+        <span class="block not-italic mt-2 text-sm text-slate">— Process engineer, global financial-services firm</span>
+      </blockquote>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">Why it sticks</span>
+      <div class="mt-5 space-y-4 text-ink/75 text-[16px] leading-relaxed">
+        <p>Mark doesn't build a tool and walk away. Because the work was theirs and their hands were on the keyboard, the capability stays after he's gone. Automate the mechanical part, leave the judgment with the expert, and the team keeps building on their own. That's the difference between a deliverable and a team that levels up.</p>
+      </div>
+    </div>
+
+    <div class="reveal soft-card rounded-2xl p-6 md:p-8">
+      <span class="mono-label">The industry backs this up</span>
+      <ul class="mt-5 space-y-4 text-[15px] leading-relaxed text-ink/80">
+        <li class="flex gap-3"><span class="stat-num text-blue text-[17px] whitespace-nowrap">60–70%</span><span>of employee time sits on activities AI and automation can take over today (McKinsey, <em>The Economic Potential of Generative AI</em>, 2023).</span></li>
+        <li class="flex gap-3"><span class="stat-num text-blue text-[17px] whitespace-nowrap">224% ROI</span><span>on Power Platform, payback under six months (Forrester TEI, commissioned by Microsoft, 2024).</span></li>
+        <li class="flex gap-3"><span class="stat-num text-blue text-[17px] whitespace-nowrap">200 hrs/yr</span><span>saved per employee on repetitive work (same study).</span></li>
+        <li class="flex gap-3"><span class="stat-num text-blue text-[17px] whitespace-nowrap">20% faster</span><span>development by cutting custom code (same study).</span></li>
+      </ul>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">Why this travels</span>
+      <ul class="mt-5 space-y-3 text-ink/75 text-[16px] leading-relaxed list-none">
+        <li class="flex gap-3"><span class="text-blue font-bold">→</span><span>Any team buried in repeatable manual work is a fit, no matter the industry.</span></li>
+        <li class="flex gap-3"><span class="text-blue font-bold">→</span><span>Coaching happens on the team's real tasks, so the value shows up in week one.</span></li>
+        <li class="flex gap-3"><span class="text-blue font-bold">→</span><span>People keep the skill and keep automating after the engagement ends.</span></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="relative py-20 mt-8 border-t border-navy/10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-2xl mx-auto px-6 text-center">
+    <h2 class="reveal font-display font-semibold tracking-tight text-[28px] md:text-[38px] text-navy leading-[1.05]">
+      Want to find the 40-hour task hiding in <span class="font-serif italic font-normal text-blue">your</span> firm?
+    </h2>
+    <p class="reveal mt-5 text-ink/70 text-[16px] leading-relaxed max-w-lg mx-auto">
+      Start with a 90-Minute AI Audit. In ninety minutes you'll have a prioritized roadmap of the automations worth building first, ranked by the hours and dollars each one gives back.
+    </p>
+    <a href="https://api.leadconnectorhq.com/widget/booking/8qM4qb2DdQ9LVIua1APJ" target="_blank" rel="noopener" class="reveal btn-gold inline-block mt-8 px-8 py-4 text-[15px]">Book your 90-Minute AI Audit</a>
+    <p class="reveal mt-4"><a href="/" class="text-sm text-blue hover:text-navy transition font-medium">&larr; Back to JamesTech</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-navy/10 py-10">
+  <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink/50">
+    <div class="flex items-center gap-3">
+      <span class="jt-badge w-7 h-7 pt-[4px]"><span class="jt text-[13px]">JT</span><span class="jt-ai text-[6px] ml-[1px]">AI</span></span>
+      <span class="font-display font-semibold text-navy">JamesTech</span>
+    </div>
+    <p>Client details anonymized for confidentiality. &middot; Mark Lucas &middot; JamesTech LLC &middot; Columbia, MD</p>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('active'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = Math.min(i % 5, 4) * 60 + 'ms';
+    io.observe(el);
+  });
+</script>
+</body>
+</html>

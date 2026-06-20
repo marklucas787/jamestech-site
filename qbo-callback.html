@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>QuickBooks Authorization | JamesTech</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#FFFFFF;--bg2:#F4F7FC;--line:rgba(14,44,110,0.12);--blue:#2A66D6;--navy:#0E2C6E;--gold:#FFC836;--gold2:#FFB200;--txt:#0E1726;--dim:#5B6B86}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font:16px/1.6 'Manrope',sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+  .card{max-width:680px;width:100%;background:#FFFFFF;border:1px solid var(--line);border-radius:16px;padding:32px;box-shadow:0 18px 50px -30px rgba(14,44,110,0.35)}
+  .badge{width:32px;height:32px;border-radius:30%;background:linear-gradient(135deg,#1A48A6,#0E2C6E);display:inline-flex;align-items:flex-start;justify-content:center;padding-top:5px;vertical-align:middle;margin-right:9px}
+  .badge .jt{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-.04em;color:#fff;font-size:15px;line-height:1}
+  .badge .ai{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--gold);font-size:7px;margin-left:1px;line-height:1}
+  h1{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:24px;margin:14px 0 6px;color:var(--navy)}
+  p{color:var(--dim);margin-bottom:14px}
+  .ok{color:#0E9F6E;font-weight:600}
+  .err{color:#E02424;font-weight:600}
+  label{font-family:'Space Grotesk',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:var(--dim);display:block;margin:14px 0 4px}
+  .box{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-family:'Space Grotesk',monospace;font-size:13px;word-break:break-all;color:var(--navy)}
+  button{margin-top:18px;background:linear-gradient(180deg,var(--gold),var(--gold2));color:var(--navy);font-weight:700;border:none;border-radius:10px;padding:12px 20px;font-size:15px;cursor:pointer;font-family:'Manrope',sans-serif}
+  button:hover{filter:brightness(1.04)}
+  .hint{font-size:13px;margin-top:16px}
+  code{background:rgba(42,102,214,0.08);padding:2px 6px;border-radius:5px;font-family:'Space Grotesk',monospace;color:var(--navy)}
+</style>
+</head>
+<body>
+<div class="card">
+  <div><span class="badge"><span class="jt">JT</span><span class="ai">AI</span></span><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--navy)">JamesTech</span></div>
+  <h1 id="title">QuickBooks Authorization</h1>
+  <p id="status">Reading authorization response…</p>
+
+  <div id="result" style="display:none">
+    <label>Copy this full URL and paste it into your terminal</label>
+    <div class="box" id="fullurl"></div>
+    <button onclick="copyUrl()">Copy URL</button>
+    <p class="hint">Then run: <code>.venv/bin/python scripts/setup_quickbooks_oauth.py "&lt;paste URL&gt;"</code></p>
+  </div>
+</div>
+<script>
+  const q = new URLSearchParams(window.location.search);
+  const code = q.get('code'), realm = q.get('realmId'), state = q.get('state'), err = q.get('error');
+  const title = document.getElementById('title'), status = document.getElementById('status');
+  if (err) {
+    title.innerHTML = '<span class="err">Authorization failed</span>';
+    status.textContent = 'Error: ' + err + '. Close this and try again from the terminal.';
+  } else if (code && realm) {
+    title.innerHTML = '<span class="ok">Authorized ✓</span>';
+    status.textContent = 'Authorization received. Copy the URL below back into your terminal to finish.';
+    document.getElementById('fullurl').textContent = window.location.href;
+    document.getElementById('result').style.display = 'block';
+  } else {
+    status.textContent = 'No authorization code found in this URL. Start again from the terminal.';
+  }
+  function copyUrl(){ navigator.clipboard.writeText(window.location.href).then(()=>{ const b=document.querySelector('button'); b.textContent='Copied ✓'; setTimeout(()=>b.textContent='Copy URL',1500); }); }
+</script>
+</body>
+</html>
