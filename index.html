@@ -182,6 +182,47 @@
   .wordmark { font-family:'Space Grotesk', sans-serif; font-weight:500; letter-spacing:.02em;
     color: rgba(14,23,38,0.45); transition: color .3s; white-space:nowrap; }
   .wordmark:hover { color: rgba(14,23,38,0.85); }
+
+  /* ===== Busywork calculator (02 / The Math) — scoped to avoid collisions ===== */
+  .calc-embed {
+    --royal:#2A66D6; --lightblue:#4D8DF0; --line:#E2E9F6;
+    --navy:#0E2C6E; --gold:#FFC836; --gold2:#FFB200; --ink:#0E1726; --slate:#5B6B86;
+    --disp:'Space Grotesk', sans-serif; --mono:'Space Grotesk', monospace;
+  }
+  .calc-embed .panel {
+    display:grid; grid-template-columns:1.25fr .9fr; gap:0;
+    background:#fff; border:1px solid var(--line); border-radius:18px; overflow:hidden;
+    box-shadow:0 24px 60px -32px rgba(14,44,110,.35);
+  }
+  .calc-embed .controls { padding:40px 44px; }
+  .calc-embed .result { padding:40px; background:linear-gradient(160deg,#0E2C6E,#1A48A6); color:#fff; position:relative; }
+  .calc-embed .ctl { margin-bottom:34px; }
+  .calc-embed .ctl:last-of-type { margin-bottom:18px; }
+  .calc-embed .ctl-top { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:14px; }
+  .calc-embed .ctl-label { font-family:var(--mono); text-transform:uppercase; letter-spacing:.1em; font-size:12.5px; color:var(--slate); font-weight:500; }
+  .calc-embed .ctl-val { font-family:var(--disp); font-weight:700; font-size:26px; color:var(--navy); }
+  .calc-embed input[type=range] { -webkit-appearance:none; appearance:none; width:100%; height:4px; border-radius:4px; background:var(--line); outline:none; cursor:pointer; }
+  .calc-embed input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; appearance:none; width:22px; height:22px; background:var(--gold); border:3px solid #fff; border-radius:5px; transform:rotate(45deg); box-shadow:0 0 0 1px var(--gold2),0 4px 12px rgba(255,178,0,.5); }
+  .calc-embed input[type=range]::-moz-range-thumb { width:18px; height:18px; background:var(--gold); border:3px solid #fff; border-radius:5px; box-shadow:0 0 0 1px var(--gold2),0 4px 12px rgba(255,178,0,.5); }
+  .calc-embed .ctl-scale { display:flex; justify-content:space-between; font-family:var(--mono); font-size:11px; letter-spacing:.05em; color:#9AA8C2; margin-top:9px; }
+  .calc-embed .assume { font-family:var(--mono); font-size:11.5px; line-height:1.6; color:var(--slate); letter-spacing:.03em; text-transform:uppercase; border-top:1px solid var(--line); padding-top:18px; }
+  .calc-embed .r-eyebrow { font-family:var(--mono); text-transform:uppercase; letter-spacing:.14em; font-size:12px; color:var(--gold); display:flex; align-items:center; gap:9px; margin-bottom:26px; }
+  .calc-embed .r-eyebrow::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--gold); box-shadow:0 0 10px var(--gold); }
+  .calc-embed .r-row { margin-bottom:22px; }
+  .calc-embed .r-cap { font-family:var(--mono); text-transform:uppercase; letter-spacing:.1em; font-size:11.5px; color:#A9C0EE; margin-bottom:4px; }
+  .calc-embed .r-hours { font-family:var(--disp); font-weight:700; font-size:64px; line-height:1; color:#fff; }
+  .calc-embed .r-hours .dot { color:var(--gold); }
+  .calc-embed .r-month { font-family:var(--disp); font-weight:700; font-size:46px; line-height:1; color:var(--gold); }
+  .calc-embed .r-year { font-family:var(--disp); font-weight:700; font-size:26px; color:#fff; }
+  .calc-embed .cta { display:block; width:100%; margin-top:26px; background:linear-gradient(90deg,var(--gold),var(--gold2)); color:var(--navy); font-family:var(--disp); font-weight:700; font-size:16px; text-align:center; text-decoration:none; padding:17px; border-radius:10px; cursor:pointer; transition:transform .15s, box-shadow .15s; box-shadow:0 10px 24px -8px rgba(255,178,0,.6); }
+  .calc-embed .cta:hover { transform:translateY(-2px); box-shadow:0 16px 30px -8px rgba(255,178,0,.7); }
+  .calc-embed .strip { display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--slate); margin-top:18px; padding:0 6px; }
+  @media (max-width:820px) {
+    .calc-embed .panel { grid-template-columns:1fr; }
+    .calc-embed .controls { padding:32px 26px; }
+    .calc-embed .result { padding:34px 26px; }
+    .calc-embed .r-hours { font-size:54px; }
+  }
 </style>
 </head>
 <body class="font-body antialiased">
@@ -266,6 +307,81 @@
     </div>
     <div class="reveal img-frame">
       <img src="problem-1.png" alt="Chaos resolving into a single clear path" />
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1.5 — THE MATH (busywork calculator) -->
+<section id="math" class="relative py-28 border-t border-navy/10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-6xl mx-auto px-6">
+    <div class="max-w-2xl">
+      <span class="reveal block mono-label">02 / The math</span>
+      <h2 class="reveal mt-5 font-display font-semibold tracking-tight text-[32px] md:text-[44px] leading-[1.05] text-navy">
+        How much is busywork <span class="font-serif italic font-normal text-blue">actually</span> costing you?
+      </h2>
+      <p class="reveal mt-5 text-ink/65 text-[16px] leading-relaxed">
+        Drag the sliders. The number on the right is what you pay every month for capacity you never get back.
+      </p>
+    </div>
+
+    <div class="reveal calc-embed mt-12">
+      <div class="panel">
+        <!-- controls -->
+        <div class="controls">
+          <div class="ctl">
+            <div class="ctl-top">
+              <span class="ctl-label">People on your team</span>
+              <span class="ctl-val" id="vTeam">15</span>
+            </div>
+            <input type="range" id="team" min="1" max="50" value="15" step="1" aria-label="People on your team" />
+            <div class="ctl-scale"><span>1</span><span>50</span></div>
+          </div>
+
+          <div class="ctl">
+            <div class="ctl-top">
+              <span class="ctl-label">Hours per person per week lost to busywork</span>
+              <span class="ctl-val" id="vHours">12 hrs</span>
+            </div>
+            <input type="range" id="hours" min="1" max="30" value="12" step="1" aria-label="Hours per person per week lost to busywork" />
+            <div class="ctl-scale"><span>1 hr</span><span>30 hrs</span></div>
+          </div>
+
+          <div class="ctl">
+            <div class="ctl-top">
+              <span class="ctl-label">Fully-loaded hourly cost (avg)</span>
+              <span class="ctl-val" id="vCost">$55/hr</span>
+            </div>
+            <input type="range" id="cost" min="25" max="150" value="55" step="5" aria-label="Fully-loaded hourly cost" />
+            <div class="ctl-scale"><span>$25/hr</span><span>$150/hr</span></div>
+          </div>
+
+          <p class="assume">Assumes &asymp;50% of busywork is automatable. Conservative &mdash; a typical Phase 1 hits 60&ndash;70%.</p>
+        </div>
+
+        <!-- result -->
+        <div class="result">
+          <div class="r-eyebrow">Capacity you could reclaim</div>
+          <div class="r-row">
+            <div class="r-cap">Hours back, per week</div>
+            <div class="r-hours"><span id="rHours">90</span><span class="dot">.</span></div>
+          </div>
+          <div class="r-row">
+            <div class="r-cap">Monthly capacity unlocked</div>
+            <div class="r-month" id="rMonth">$21,434</div>
+          </div>
+          <div class="r-row">
+            <div class="r-cap">Annualized</div>
+            <div class="r-year" id="rYear">$257,208</div>
+          </div>
+          <a class="cta" id="calcCta" href="https://api.leadconnectorhq.com/widget/booking/8qM4qb2DdQ9LVIua1APJ" target="_blank" rel="noopener">Show me where it's hiding &rarr;</a>
+        </div>
+      </div>
+
+      <div class="strip">
+        <span>Fig.01 &middot; Reclaimed-capacity model, directional not a quote</span>
+        <span>Average client recovers $42K&ndash;$180K / yr</span>
+      </div>
     </div>
   </div>
 </section>
@@ -397,6 +513,27 @@
         <p>I have spent more than 30 years inside the Microsoft ecosystem, building solutions for organizations that cannot afford to get it wrong: NASA's Moon to Mars program, the Department of Justice, NATO, and financial institutions like T. Rowe Price. I hold Microsoft certifications going back to 1996 and I build on the Power Platform every day.</p>
         <p class="text-ink/90">I am not an AI generalist who learned Microsoft last week, and I am not a Microsoft consultant who's nervous about AI. I am the bridge. That is the whole point of an advisor: you get judgment, not a product pitch.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4.5 — RECEIPTS (Senja testimonials) -->
+<section id="receipts" class="relative py-28 border-t border-navy/10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="reveal block mono-label">Receipts</span>
+      <h2 class="reveal mt-5 font-display font-semibold tracking-tight text-[32px] md:text-[44px] leading-[1.05] text-navy">
+        Receipts, <span class="font-serif italic font-normal text-blue">not</span> pitch decks.
+      </h2>
+      <p class="reveal mt-6 text-ink/70 text-[16px] leading-relaxed">
+        AI either changes someone's week or it doesn't. The people on the other end of the work are the only honest reviewers. Here's what mine say.
+      </p>
+    </div>
+    <div class="reveal mt-12">
+      <!-- Senja testimonial wall (managed in Senja, same widget as velocityvoiceai.com) -->
+      <script src="https://widget.senja.io/widget/0a846478-ac7f-4e53-97af-ddd410a690f4/platform.js" type="text/javascript" async></script>
+      <div class="senja-embed" data-id="0a846478-ac7f-4e53-97af-ddd410a690f4" data-mode="shadow" data-lazyload="false" style="display: block; width: 100%;"></div>
     </div>
   </div>
 </section>
@@ -552,6 +689,48 @@
     el.style.transitionDelay = Math.min(i % 6, 5) * 60 + 'ms';
     io.observe(el);
   });
+</script>
+
+<script>
+  // Busywork / reclaimed-capacity calculator
+  (function () {
+    const AUTOMATABLE_PCT = 0.50;   // share of busywork assumed automatable
+    const WEEKS_PER_MONTH = 4.333;  // 52 / 12
+    const BOOKING_URL = "https://api.leadconnectorhq.com/widget/booking/8qM4qb2DdQ9LVIua1APJ";
+
+    const team  = document.getElementById('team');
+    const hours = document.getElementById('hours');
+    const cost  = document.getElementById('cost');
+    if (!team || !hours || !cost) return;
+
+    document.getElementById('calcCta').href = BOOKING_URL;
+    const usd = n => '$' + Math.round(n).toLocaleString('en-US');
+
+    function paintFill(el) {
+      const pct = (el.value - el.min) / (el.max - el.min) * 100;
+      el.style.background =
+        `linear-gradient(90deg, var(--royal) 0%, var(--lightblue) ${pct}%, var(--line) ${pct}%)`;
+    }
+
+    function calc() {
+      const t = +team.value, h = +hours.value, c = +cost.value;
+      const reclaimed = t * h * AUTOMATABLE_PCT;          // hours/week
+      const monthly   = reclaimed * c * WEEKS_PER_MONTH;  // $/month
+      const annual    = monthly * 12;                     // $/year
+
+      document.getElementById('vTeam').textContent  = t;
+      document.getElementById('vHours').textContent = h + ' hrs';
+      document.getElementById('vCost').textContent  = '$' + c + '/hr';
+      document.getElementById('rHours').textContent = Math.round(reclaimed);
+      document.getElementById('rMonth').textContent = usd(monthly);
+      document.getElementById('rYear').textContent  = usd(annual);
+
+      [team, hours, cost].forEach(paintFill);
+    }
+
+    [team, hours, cost].forEach(el => el.addEventListener('input', calc));
+    calc();
+  })();
 </script>
 </body>
 </html>
