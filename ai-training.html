@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Training · JamesTech LLC · Columbia, MD</title>
+<meta name="description" content="A half-day, hands-on AI class in Columbia, MD. Six seats. Bring your laptop, walk out with a working AI Operating System built on Claude and loaded with your business.">
+<meta property="og:title" content="Walk out with a working AI Operating System. Not notes.">
+<meta property="og:description" content="Half-day, hands-on AI training in Columbia, MD. Six seats per class. If you don't leave with a working AI system on your laptop, the session is free.">
+<meta property="og:image" content="https://www.jamestech.com/assets/ai-training/hero-warm-desk.jpg">
+<meta property="og:url" content="https://www.jamestech.com/ai-training">
+<meta property="og:type" content="website">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F3EA;
+    --paper-deep: #EFE8D9;
+    --ink: #14283F;
+    --ink-soft: #3D5068;
+    --navy-block: #102036;
+    --brass: #A8843C;
+    --hairline: #D8CFBC;
+    --card: #FCFAF4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Manrope', -apple-system, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  img { max-width: 100%; display: block; }
+  .sheet { max-width: 1020px; margin: 0 auto; padding: 44px 48px 36px; }
+
+  .masthead {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    border-bottom: 2px solid var(--ink); padding-bottom: 18px;
+  }
+  .masthead .firm {
+    font-family: 'Fraunces', serif; font-weight: 600; font-size: 21px; letter-spacing: 0.01em;
+  }
+  .masthead .firm a { color: inherit; text-decoration: none; }
+  .masthead .firm span { color: var(--brass); }
+  .stamp {
+    border: 1.5px solid var(--brass); color: var(--brass); border-radius: 999px;
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 5px 14px; white-space: nowrap;
+  }
+
+  .hero {
+    padding: 34px 0 6px;
+    display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 36px; align-items: center;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif; font-weight: 500; font-size: 40px;
+    line-height: 1.08; letter-spacing: -0.01em;
+  }
+  .hero h1 em { font-style: italic; color: var(--brass); }
+  .hero .dek { margin-top: 14px; font-size: 15.5px; color: var(--ink-soft); }
+  .hook {
+    margin-top: 18px;
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 16px;
+    color: var(--ink); border-left: 3px solid var(--brass); padding-left: 16px;
+  }
+  .photoframe {
+    border: 1px solid var(--hairline); background: var(--card); padding: 10px 10px 8px;
+    box-shadow: 0 14px 34px rgba(20,40,63,0.10);
+  }
+  .photoframe img { aspect-ratio: 16/10; object-fit: cover; }
+  .photoframe .cap {
+    padding: 8px 4px 2px; font-size: 11.5px; color: var(--ink-soft);
+    display: flex; justify-content: space-between; letter-spacing: 0.02em;
+  }
+  .photoframe .cap b { color: var(--brass); font-weight: 800; text-transform: uppercase; font-size: 10px; letter-spacing: 0.12em; }
+
+  .row-label {
+    font-size: 10.5px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--brass); margin: 34px 0 12px 2px;
+  }
+  .doors { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .card {
+    background: var(--card); border: 1px solid var(--hairline);
+    border-top: 3px solid var(--ink);
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  .card.brass-top { border-top-color: var(--brass); }
+  .card .photo { position: relative; }
+  .card .photo img { aspect-ratio: 3/1.6; object-fit: cover; }
+  .card .photo::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(20,40,63,0) 55%, rgba(20,40,63,0.28) 100%);
+  }
+  .card .inner { padding: 20px 24px 18px; display: flex; flex-direction: column; flex: 1; }
+  .card .eyebrow {
+    font-size: 10.5px; font-weight: 800; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink-soft);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .card .eyebrow .tag {
+    color: var(--brass); border: 1px solid var(--brass); border-radius: 999px;
+    padding: 2px 9px; font-size: 9.5px; letter-spacing: 0.1em;
+  }
+  .card h2 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 23px; margin-top: 8px; }
+  .card .quote {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 15px;
+    color: var(--brass); margin-top: 5px;
+  }
+  .card ul { list-style: none; margin-top: 14px; flex: 1; }
+  .card ul li {
+    font-size: 13.5px; color: var(--ink-soft); padding: 5px 0 5px 20px; position: relative;
+  }
+  .card ul li::before {
+    content: ""; position: absolute; left: 2px; top: 12px;
+    width: 7px; height: 7px; border: 1.5px solid var(--brass); border-radius: 999px;
+  }
+  .card ul li strong { color: var(--ink); font-weight: 700; }
+  .price {
+    margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--hairline);
+    display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  }
+  .price .amt { font-weight: 800; font-size: 19px; letter-spacing: -0.01em; white-space: nowrap; }
+  .price .amt small { font-weight: 600; font-size: 12px; color: var(--ink-soft); }
+  .price .note { font-size: 12px; color: var(--ink-soft); text-align: right; }
+
+  .leavewith {
+    margin-top: 22px; background: var(--paper-deep); border: 1px solid var(--hairline);
+    padding: 20px 24px;
+  }
+  .leavewith .lbl {
+    font-size: 10.5px; font-weight: 800; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--brass);
+  }
+  .leavewith .items {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 12px;
+  }
+  .leavewith .item strong {
+    display: block; font-family: 'Fraunces', serif; font-weight: 600; font-size: 15px;
+  }
+  .leavewith .item span { font-size: 12.5px; color: var(--ink-soft); display: block; margin-top: 3px; }
+  .guarantee {
+    margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--hairline);
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 14.5px; color: var(--ink);
+  }
+
+  .feeling {
+    margin-top: 22px; position: relative; overflow: hidden;
+    border: 1px solid var(--hairline);
+  }
+  .feeling img { aspect-ratio: 21/8; object-fit: cover; object-position: center 38%; }
+  .feeling .veil {
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(16,32,54,0.78) 0%, rgba(16,32,54,0.45) 46%, rgba(16,32,54,0.05) 75%);
+  }
+  .feeling .txt {
+    position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center;
+    padding: 24px 34px; max-width: 58%;
+  }
+  .feeling .txt .lbl {
+    font-size: 10.5px; font-weight: 800; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--brass);
+  }
+  .feeling .txt p {
+    margin-top: 8px; font-family: 'Fraunces', serif; font-size: 21px; line-height: 1.3;
+    color: #F4EFE3; font-weight: 500;
+  }
+  .feeling .txt p em { font-style: italic; color: #E8CE96; }
+
+  .flow { display: block; width: 100%; height: 58px; }
+  .flow path { stroke: var(--ink-soft); stroke-width: 1.3; fill: none; }
+  .flow .lbl {
+    font-family: 'Manrope', sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase; fill: var(--ink-soft);
+  }
+  .flow .arrow { fill: var(--ink-soft); stroke: none; }
+
+  .destination {
+    background: var(--navy-block); color: #F4EFE3; padding: 24px 30px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+  }
+  .destination .eyebrow {
+    font-size: 10.5px; font-weight: 800; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--brass); grid-column: 1 / -1;
+  }
+  .destination h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 20px; }
+  .destination p { font-size: 13px; color: #C9C2B0; margin-top: 6px; }
+  .destination .amt { font-weight: 800; font-size: 15px; margin-top: 8px; color: #F4EFE3; }
+  .destination .credit {
+    grid-column: 1 / -1; border-top: 1px solid rgba(244,239,227,0.2); padding-top: 12px;
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 14px; color: #F4EFE3;
+  }
+  .destination .credit b { color: var(--brass); font-style: normal; font-family: 'Manrope', sans-serif; font-weight: 800; }
+
+  .logistics {
+    margin-top: 22px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  }
+  .logistics .cell { border-top: 1px solid var(--hairline); padding-top: 10px; }
+  .logistics .cell .lbl {
+    font-size: 10px; font-weight: 800; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--brass);
+  }
+  .logistics .cell p { font-size: 12.5px; color: var(--ink-soft); margin-top: 4px; }
+
+  .cardbtn {
+    display: block; text-align: center; margin-top: 14px;
+    background: var(--ink); color: #F4EFE3; text-decoration: none;
+    font-weight: 800; font-size: 14px; letter-spacing: 0.02em;
+    padding: 12px 24px; border-radius: 2px;
+  }
+  .cardbtn:hover { background: var(--navy-block); }
+  .cardbtn.ghost {
+    background: transparent; color: var(--ink);
+    border: 1.5px solid var(--ink);
+  }
+  .cardbtn.ghost:hover { background: var(--ink); color: #F4EFE3; }
+  .altlink {
+    display: block; text-align: center; margin-top: 8px;
+    font-size: 12.5px; color: var(--ink-soft);
+  }
+  .altlink a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--brass); }
+
+  .footer {
+    margin-top: 28px; border-top: 2px solid var(--ink); padding-top: 14px;
+    display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;
+  }
+  .footer .who { font-family: 'Fraunces', serif; font-weight: 600; font-size: 15px; }
+  .footer .contact { font-size: 12.5px; color: var(--ink-soft); }
+  .footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--brass); }
+
+  @media (max-width: 720px) {
+    .sheet { padding: 28px 20px; }
+    .hero { grid-template-columns: 1fr; gap: 22px; }
+    .hero h1 { font-size: 32px; }
+    .doors, .destination { grid-template-columns: 1fr; }
+    .leavewith .items { grid-template-columns: 1fr 1fr; }
+    .logistics { grid-template-columns: 1fr; }
+    .feeling img { aspect-ratio: 4/3; }
+    .feeling .veil { background: linear-gradient(180deg, rgba(16,32,54,0.72) 0%, rgba(16,32,54,0.25) 100%); }
+    .feeling .txt { max-width: 100%; justify-content: flex-start; padding: 20px; }
+    .feeling .txt p { font-size: 17px; }
+  }
+  @media print {
+    body { background: var(--paper); }
+    .sheet { padding: 24px 32px; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="masthead">
+    <div class="firm"><a href="/">JamesTech <span>LLC</span></a></div>
+    <div class="stamp">AI Training · Columbia, MD</div>
+  </div>
+
+  <div class="hero">
+    <div>
+      <h1>Walk out with a working <em>AI Operating System.</em> Not notes.</h1>
+      <p class="dek">This is not generic AI training. You bring your laptop, and by the end of the session you have a basic AI Operating System built on Claude, tailored to your business, running on your own machine.</p>
+      <p class="hook">Ask any AI a question about your business. Does it answer like a teammate, or like a stranger who met you 5 seconds ago? That difference is what you leave with.</p>
+    </div>
+    <div class="photoframe">
+      <img src="assets/ai-training/hero-warm-desk.jpg" alt="A warmly lit desk with an open laptop, plants, and morning light">
+      <div class="cap"><b>Your desk, after</b><span>One morning brief, every day, before you sit down</span></div>
+    </div>
+  </div>
+
+  <div class="row-label">Two Ways In · Pick One</div>
+  <div class="doors">
+
+    <div class="card">
+      <div class="photo"><img src="assets/ai-training/small-group-class.jpg" alt="Six professionals learning together around a warm wooden table" loading="lazy"></div>
+      <div class="inner">
+        <div class="eyebrow">Option 1 <span class="tag">Recommended Start</span></div>
+        <h2>The Small Group Class</h2>
+        <p class="quote">"Six seats. Half a day. Everyone leaves with it running."</p>
+        <ul>
+          <li><strong>6 people max</strong> per session, so everyone gets hands-on help</li>
+          <li><strong>In person</strong> at the Columbia office, or <strong>live virtual</strong>, streamed interactively</li>
+          <li>Half-day working session. Bring one real workflow from your business</li>
+          <li>If a date fills past 6, a second session opens the same day</li>
+          <li><strong>First session: Thursday, August 27</strong> · 8:30 AM - 12:30 PM</li>
+        </ul>
+        <div class="price">
+          <div class="amt">$597 <small>in person</small> · $297 <small>virtual</small></div>
+          <div class="note"><strong>Founder pricing.</strong> Rises to $997 / $497 in the near future.</div>
+        </div>
+        <a class="cardbtn" href="https://cal.com/jamestechai/ai-operating-system-training">Reserve Your In-Person Seat</a>
+        <span class="altlink">Joining remotely? <a href="https://cal.com/jamestechai/ai-working-session-virtual">Book a virtual seat instead</a></span>
+      </div>
+    </div>
+
+    <div class="card brass-top">
+      <div class="photo"><img src="assets/ai-training/private-one-on-one.jpg" alt="A private working session between two professionals in warm lamp light" loading="lazy"></div>
+      <div class="inner">
+        <div class="eyebrow">Option 2</div>
+        <h2>Private One-on-One</h2>
+        <p class="quote">"Your business, your data, your pace."</p>
+        <ul>
+          <li><strong>Just you</strong> (plus up to 2 team members), in person or virtual</li>
+          <li>Half-day intensive at your office or mine</li>
+          <li>Deeper install on your real business data, in private</li>
+          <li>Schedule on your calendar, no class date to wait for</li>
+        </ul>
+        <div class="price">
+          <div class="amt">$2,500</div>
+          <div class="note">Includes follow-up check-in call</div>
+        </div>
+        <a class="cardbtn ghost" href="https://cal.com/jamestechai/discovery-call">Book a Free Planning Call</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="leavewith">
+    <div class="lbl">What You Leave With · Both Options</div>
+    <div class="items">
+      <div class="item"><strong>Claude, installed</strong><span>Claude Desktop or Claude Code, set up and working on your machine</span></div>
+      <div class="item"><strong>Your business, loaded</strong><span>Connected to your real documents so it answers like a teammate</span></div>
+      <div class="item"><strong>A daily brief</strong><span>Your AI's first standing job: a morning summary of what matters</span></div>
+      <div class="item"><strong>A starter AIOS</strong><span>A basic AI Operating System tailored to your business, yours to keep</span></div>
+    </div>
+    <div class="guarantee">If you don't leave with a working AI system on your laptop, the session is free.</div>
+  </div>
+
+  <div class="feeling">
+    <img src="assets/ai-training/after-deck-ease.jpg" alt="A relaxed professional on a deck, laptop closed beside him" loading="lazy">
+    <div class="veil"></div>
+    <div class="txt">
+      <div class="lbl">The Point Of All This</div>
+      <p>Five mornings after class, your daily brief has already run five times, <em>without you touching anything.</em> That is what an operating system feels like: the routine work starts happening on its own, and you get your attention back.</p>
+    </div>
+  </div>
+
+  <svg class="flow" viewBox="0 0 1020 58" aria-hidden="true">
+    <path d="M 510 4 L 510 40" />
+    <polygon class="arrow" points="504,40 516,40 510,52" />
+    <text class="lbl" x="524" y="30">When you're ready for more</text>
+  </svg>
+
+  <div class="destination">
+    <div class="eyebrow">The Follow-On Path · Offered In Class, Never Pushed</div>
+    <div>
+      <h3>AI Opportunity Audit</h3>
+      <p>I map the workflows eating your team's hours and hand you a one-page roadmap of your top AI wins, ranked by hours saved.</p>
+      <div class="amt">$3,500 fixed · two weeks</div>
+    </div>
+    <div>
+      <h3>Full AIOS Install + Fractional AI Officer</h3>
+      <p>The complete system: your AI learns the business, watches live numbers, ships new automations monthly. I run it with you on retainer.</p>
+      <div class="amt">Retainers from $3,500/month</div>
+    </div>
+    <div class="credit"><b>Your session fee credits in full</b> toward either, booked within 30 days.</div>
+  </div>
+
+  <div class="logistics">
+    <div class="cell">
+      <div class="lbl">Venue</div>
+      <p>10015 Old Columbia Rd, Suite B 215, Columbia, MD 21046. Free parking.</p>
+    </div>
+    <div class="cell">
+      <div class="lbl">Virtual Seats</div>
+      <p>Streamed live and interactive. Same session, same install, screen-share support included.</p>
+    </div>
+    <div class="cell">
+      <div class="lbl">Bring</div>
+      <p>Your laptop and one workflow you're tired of doing by hand. That's it.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="who">Mark Lucas · JamesTech LLC · Since 2001</div>
+    <div class="contact"><a href="mailto:mrlucas@jamestech.com">mrlucas@jamestech.com</a> · <a href="https://www.jamestech.com">jamestech.com</a></div>
+  </div>
+
+</div>
+</body>
+</html>

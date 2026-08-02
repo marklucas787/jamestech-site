@@ -23,3 +23,8 @@
   for = "/case-study.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/ai-training.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
