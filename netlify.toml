@@ -3,6 +3,25 @@
 [build]
   publish = "."
 
+# Security headers, applied to every path.
+# No Content-Security-Policy on purpose: the pages use inline <script> blocks, so any
+# CSP would need 'unsafe-inline' (which defeats the point), and a strict one risks
+# silently breaking the Senja testimonial widget on the homepage.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# The QuickBooks OAuth callback receives a single-use auth code in the query string.
+# Send no referrer at all from this page so the code can never reach a third party.
+[[headers]]
+  for = "/qbo-callback.html"
+  [headers.values]
+    Referrer-Policy = "no-referrer"
+
 # Long-cache the images, always-revalidate the HTML.
 [[headers]]
   for = "/*.png"
