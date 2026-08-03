@@ -9,7 +9,7 @@ bright blue + gold palette.
 
 ## Pages
 
-- `index.html` — 90-Minute AI Audit landing page (funnel front end)
+- `index.html` — 90-Minute AI Opportunity Review landing page (funnel front end)
 - `case-study.html` — anonymized financial-services coaching case study (shareable link)
 - `privacy.html`, `terms.html`, `eula.html`
 - `qbo-callback.html` — QuickBooks OAuth callback
