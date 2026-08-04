@@ -223,6 +223,13 @@
   }
   .altlink a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--brass); }
 
+  /* A2P 10DLC: carrier registration requires consent language wherever we collect a mobile number. */
+  .smsconsent {
+    display: block; margin-top: 10px;
+    font-size: 11.5px; line-height: 1.45; color: var(--ink-soft);
+  }
+  .smsconsent a { color: inherit; text-decoration: underline; }
+
   .footer {
     margin-top: 28px; border-top: 2px solid var(--ink); padding-top: 14px;
     display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;
@@ -291,6 +298,7 @@
         </div>
         <a class="cardbtn" href="https://cal.com/jamestechai/ai-operating-system-training">Reserve Your In-Person Seat</a>
         <span class="altlink">Joining remotely? <a href="https://cal.com/jamestechai/ai-working-session-virtual">Book a virtual seat instead</a></span>
+        <span class="smsconsent">Reserving a seat sends you a text confirmation and class reminders from JamesTech, LLC. Message frequency varies, message and data rates may apply, and you can reply STOP to opt out at any time. See our <a href="/privacy.html">Privacy Policy</a>.</span>
       </div>
     </div>
 
@@ -311,6 +319,7 @@
           <div class="note">Includes follow-up check-in call</div>
         </div>
         <a class="cardbtn ghost" href="https://cal.com/jamestechai/discovery-call">Book a Free Planning Call</a>
+        <span class="smsconsent">Booking sends you a text confirmation and reminder from JamesTech, LLC. Message frequency varies, message and data rates may apply, and you can reply STOP to opt out at any time. See our <a href="/privacy.html">Privacy Policy</a>.</span>
       </div>
     </div>
 
