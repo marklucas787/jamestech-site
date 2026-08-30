@@ -66,6 +66,61 @@
   table.snap td.k { color:var(--slate); font-family:'Space Grotesk',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.14em; width:38%; white-space:nowrap; }
   table.snap tr:last-child td { border-bottom:none; }
 </style>
+<!-- Structured data: Organization/Person (added 2026-08-29) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://jamestech.com/#org",
+      "name": "JamesTech LLC",
+      "url": "https://jamestech.com",
+      "email": "info@jamestech.com",
+      "telephone": "+1-240-363-2961",
+      "logo": "https://jamestech.com/assets/jt-ai-icon-512.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Columbia",
+        "addressRegion": "MD",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        "Columbia MD",
+        "Howard County MD",
+        "Maryland",
+        "Baltimore-Washington corridor"
+      ],
+      "founder": {
+        "@id": "https://jamestech.com/#mark-lucas"
+      },
+      "description": "AI automation consulting and Microsoft Power Platform builds for 5 to 50 person firms. AI Opportunity Review, AI Operating System installs, Fractional AI Officer retainers, and a half-day AI Operating System training class in Columbia, Maryland."
+    },
+    {
+      "@type": "Person",
+      "@id": "https://jamestech.com/#mark-lucas",
+      "name": "Mark Lucas",
+      "jobTitle": "Founder and Lead Consultant",
+      "worksFor": {
+        "@id": "https://jamestech.com/#org"
+      },
+      "url": "https://jamestech.com",
+      "knowsAbout": [
+        "Microsoft Power Platform",
+        "Power Automate",
+        "Power Apps",
+        "Dataverse",
+        "SharePoint Online",
+        "Copilot Studio",
+        "AI automation for small business",
+        "AI operating systems",
+        "Voice AI agents"
+      ],
+      "description": "Founder of JamesTech LLC in Columbia, Maryland. Roughly thirty years building on the Microsoft stack, including three years as a Microsoft employee. Artemis program contractor at NASA via The Aerospace Corporation. Has delivered for the Department of Justice, NATO, and a global financial-services firm."
+    }
+  ]
+}
+</script>
 </head>
 <body class="font-body antialiased">
 
@@ -96,6 +151,13 @@
     <p class="reveal mt-6 text-[18px] leading-relaxed text-ink/70">
       A team had sat through vendor training and come away with little. Mark Lucas took a different path: hands-on coaching on the work they actually do every day. It grew into working side by side, automating their own tasks together. By the end, one task that took 40 hours by hand was running in minutes.
     </p>
+  </div>
+</section>
+
+<!-- AUTHOR BYLINE -->
+<section class="relative">
+  <div class="max-w-3xl mx-auto px-6">
+    <p class="reveal text-[14px] text-ink/60">By <strong class="text-ink/85">Mark Lucas</strong>, founder of JamesTech LLC, Columbia, MD. Roughly thirty years on the Microsoft stack, three of them at Microsoft. Artemis program contractor at NASA.</p>
   </div>
 </section>
 
