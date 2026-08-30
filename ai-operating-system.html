@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Operating System for Small Business: What It Is and How JamesTech Installs One | JamesTech</title>
+<meta name="description" content="What an AI operating system is, the five layers, what it costs, and how JamesTech LLC installs one for 5 to 50 person firms in Columbia, Maryland on Microsoft 365 and Power Platform." />
+<link rel="canonical" href="https://jamestech.com/ai-operating-system.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="AI Operating System for Small Business: What It Is and How JamesTech Installs One | JamesTech" />
+<meta property="og:description" content="What an AI operating system is, the five layers, what it costs, and how JamesTech LLC installs one for 5 to 50 person firms in Columbia, Maryland on Microsoft 365 and Power Platform." />
+<meta property="og:url" content="https://jamestech.com/ai-operating-system.html" />
+<meta property="og:image" content="https://jamestech.com/assets/jt-ai-icon-512.png" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/jt-ai-icon.png" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['Manrope', 'sans-serif'],
+          serif: ['"Instrument Serif"', 'serif'],
+          mono: ['"Space Grotesk"', 'monospace'],
+        },
+        colors: {
+          navy: '#0E2C6E', blue: '#2A66D6', blue2: '#1A48A6', lblue: '#4D8DF0',
+          gold: '#FFC836', gold2: '#FFB200', ink: '#0E1726', slate: '#5B6B86', mist: '#F4F7FC',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root { --line: rgba(14,44,110,0.10); --line2: rgba(14,44,110,0.18); --blue:#2A66D6; --navy:#0E2C6E; --gold:#FFC836; --gold2:#FFB200; }
+  html { scroll-behavior: smooth; }
+  body { background:#FFFFFF; color:#0E1726; font-family:'Manrope',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  ::selection { background: var(--gold); color: var(--navy); }
+
+  .jt-badge { border-radius:30%; background:linear-gradient(135deg,#1A48A6,#0E2C6E); display:inline-flex; align-items:flex-start; justify-content:center; flex:none; }
+  .jt-badge .jt { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-.04em; color:#fff; line-height:1; }
+  .jt-badge .jt-ai { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-.02em; color:#FFC836; line-height:1; }
+
+  .mono-label { font-family:'Space Grotesk',monospace; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.24em; color:var(--blue); }
+  .glass { background:#FFFFFF; border:1px solid var(--line); box-shadow:0 1px 2px rgba(14,44,110,0.04), 0 18px 40px -28px rgba(14,44,110,0.30); }
+  .soft-card { background:#FFFFFF; border:1px solid var(--line); box-shadow:0 1px 2px rgba(14,44,110,0.03); }
+  .aura { position:absolute; inset:0; pointer-events:none; }
+  .aura::before { content:''; position:absolute; width:560px; height:560px; left:-160px; top:-200px; background:radial-gradient(circle, rgba(42,102,214,0.12), transparent 60%); filter:blur(44px); }
+  .aura::after { content:''; position:absolute; width:520px; height:520px; right:-150px; bottom:-180px; background:radial-gradient(circle, rgba(255,200,54,0.14), transparent 60%); filter:blur(50px); }
+
+  .btn-gold { background:linear-gradient(180deg,var(--gold),var(--gold2)); color:var(--navy); font-weight:700; border-radius:10px; transition:transform .25s, box-shadow .25s, filter .25s; box-shadow:0 10px 30px -8px rgba(255,178,0,0.55); }
+  .btn-gold:hover { transform:translateY(-2px); filter:brightness(1.03); box-shadow:0 16px 40px -8px rgba(255,178,0,0.7); }
+  .btn-ghost { border:1px solid var(--line2); color:var(--navy); border-radius:10px; transition:background .25s, border-color .25s; }
+  .btn-ghost:hover { background:rgba(42,102,214,0.06); border-color:var(--blue); }
+
+  .quote { border-left:3px solid var(--gold); padding:4px 0 4px 22px; }
+  .stat-num { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-.02em; color:var(--navy); line-height:1; }
+  .reveal { opacity:0; filter:blur(6px); transform:translateY(20px); transition:all .9s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.active { opacity:1; filter:blur(0); transform:translateY(0); }
+  table.snap { width:100%; border-collapse:collapse; }
+  table.snap td { padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top; font-size:15px; }
+  table.snap td.k { color:var(--slate); font-family:'Space Grotesk',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.14em; width:38%; white-space:nowrap; }
+  table.snap tr:last-child td { border-bottom:none; }
+</style>
+<style>
+  table.cmp { width:100%; border-collapse:collapse; font-size:15px; }
+  table.cmp th { text-align:left; font-family:'Space Grotesk',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.14em; color:var(--slate); padding:10px 12px; border-bottom:1px solid var(--line2); }
+  table.cmp td { padding:12px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.cmp td:first-child { color:var(--slate); font-size:14px; width:30%; }
+  table.cmp tr:last-child td { border-bottom:none; }
+  details { border-bottom:1px solid var(--line); }
+  details summary { cursor:pointer; list-style:none; }
+  details summary::-webkit-details-marker { display:none; }
+  details[open] .plus { transform:rotate(45deg); }
+  .plus { transition:transform .25s; color:var(--blue); }
+  .prose p { margin-top:1rem; }
+</style>
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://jamestech.com/#org",
+      "name": "JamesTech LLC",
+      "url": "https://jamestech.com",
+      "email": "info@jamestech.com",
+      "telephone": "+1-240-363-2961",
+      "logo": "https://jamestech.com/assets/jt-ai-icon-512.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Columbia",
+        "addressRegion": "MD",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        "Columbia MD",
+        "Howard County MD",
+        "Maryland",
+        "Baltimore-Washington corridor"
+      ],
+      "founder": {
+        "@id": "https://jamestech.com/#mark-lucas"
+      },
+      "description": "AI automation consulting and Microsoft Power Platform builds for 5 to 50 person firms. AI Opportunity Review, AI Operating System installs, Fractional AI Officer retainers, and a half-day AI Operating System training class in Columbia, Maryland."
+    },
+    {
+      "@type": "Person",
+      "@id": "https://jamestech.com/#mark-lucas",
+      "name": "Mark Lucas",
+      "jobTitle": "Founder and Lead Consultant",
+      "worksFor": {
+        "@id": "https://jamestech.com/#org"
+      },
+      "url": "https://jamestech.com",
+      "knowsAbout": [
+        "Microsoft Power Platform",
+        "Power Automate",
+        "Power Apps",
+        "Dataverse",
+        "SharePoint Online",
+        "Copilot Studio",
+        "AI automation for small business",
+        "AI operating systems",
+        "Voice AI agents"
+      ],
+      "description": "Founder of JamesTech LLC in Columbia, Maryland. Roughly thirty years building on the Microsoft stack, including three years as a Microsoft employee. Artemis program contractor at NASA via The Aerospace Corporation. Has delivered for the Department of Justice, NATO, and a global financial-services firm."
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does a small business get an AI operating system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An AI operating system is the connected layer of business context, data, and automations that lets AI do recurring work across the tools a company already uses, instead of one-off chatbot prompts. JamesTech LLC installs one for small businesses in three steps: an AI Opportunity Review that ranks automations by hours and dollars returned, a scoped build on Microsoft 365 and Power Platform, and training so the team runs it themselves."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is an AI operating system the same as ChatGPT or Copilot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ChatGPT and Copilot are the engines. An AI operating system is what you build around one so it knows your clients, your numbers, and your processes, and can act on them. Without that layer, every conversation starts from zero."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do we have to replace our current software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The install connects to what you already run: Microsoft 365, Power Platform, your accounting system, your calendar. Nothing moves. The AI reads from those systems and writes back to them through automations you approve."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does an install take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Review takes about a week. A first build, with the context layer, one or two data sources, and the first two to four automations, typically runs two to three weeks. Automations keep landing after that at two to four per month on a retainer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The AI Opportunity Review starts at $2,500 and is credited in full toward the build. Builds are scoped from the roadmap, so you see the price before any work starts. Ongoing retainers start at $3,700 a month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is our data safe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your data stays in your Microsoft tenant and your own systems. Mark has handled Controlled Unclassified Information for NASA and delivered for the DOJ and NATO. Access, retention, and compliance constraints are documented in the roadmap and flagged on every recommendation."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body class="font-body antialiased">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="mt-4 glass rounded-xl flex items-center justify-between px-5 py-3">
+      <a href="/" class="flex items-center gap-3">
+        <span class="jt-badge w-9 h-9 pt-[5px]"><span class="jt text-[17px]">JT</span><span class="jt-ai text-[8px] ml-[2px] mt-[1px]">AI</span></span>
+        <span class="flex flex-col leading-none">
+          <span class="font-display font-bold text-navy text-[15px] tracking-tight">JamesTech</span>
+          <span class="font-body text-[9px] tracking-[0.16em] uppercase text-slate mt-[3px]">Since 2001</span>
+        </span>
+      </a>
+      <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="btn-gold text-sm px-4 py-2">Book the Review</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative pt-36 pb-10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-3xl mx-auto px-6">
+    <div class="reveal"><span class="mono-label">AI Operating System &middot; Small business</span></div>
+    <h1 class="reveal mt-6 font-display font-semibold tracking-tighter leading-[1.02] text-[34px] sm:text-[44px] text-navy">An AI operating system, <span class="font-serif italic font-normal text-blue">explained</span>, and how a small business gets one.</h1>
+    <p class="reveal mt-6 text-[18px] leading-relaxed text-ink/70">The connected layer of context, data, and automations that lets AI do recurring work inside the Microsoft tools you already own. Installed in three steps by JamesTech LLC, Columbia, Maryland.</p>
+  </div>
+</section>
+
+<!-- AUTHOR BYLINE -->
+<section class="relative">
+  <div class="max-w-3xl mx-auto px-6">
+    <p class="reveal text-[14px] text-ink/60">By <strong class="text-ink/85">Mark Lucas</strong>, founder of JamesTech LLC, Columbia, MD. Roughly thirty years on the Microsoft stack, three of them at Microsoft. Artemis program contractor at NASA.</p>
+  </div>
+</section>
+
+<!-- BODY -->
+<section class="relative pb-8 pt-6">
+  <div class="max-w-2xl mx-auto px-6 space-y-12">
+
+    <div class="reveal">
+      <span class="mono-label">The definition</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">What an AI operating system is.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p>An AI operating system (AIOS) is a working layer of business context, live data, and automations wrapped around an AI model so it can do recurring work inside the tools a company already owns. The model is the engine. The operating system is everything that lets the engine know your business and act on it.</p>
+        <p>The difference shows up the first time you ask a question. Ask a plain chatbot about your biggest client and it answers like a stranger who met you five seconds ago. Ask an AI operating system and it answers like a teammate who has been in the room for years: who the client is, what you sold them, what is overdue, what was promised on last Tuesday's call.</p>
+        <p>JamesTech LLC installs AI operating systems for 5 to 50 person firms in and around Columbia, Maryland, on the Microsoft 365 and Power Platform tools most of those firms already pay for. This page explains what gets installed, in what order, what it costs, and how to tell whether you need one.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">What it does</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">A typical install, 30 days in.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p>A morning brief lands on your phone at 7 AM: today's calendar, overdue invoices, what happened in yesterday's meetings, and what needs your attention. You did not open an app to get it.</p>
+        <p>Before a client call you say "prep me for Karen" and get the full history, what is pending, and what to raise. Status reports draft themselves from meeting transcripts and tracked hours; you review and send. Revenue by client and outstanding invoices come straight from your accounting system, updated daily.</p>
+        <p>Task management stops being a list. The system knows your priorities, flags what is overdue, tracks what you are waiting on from other people, and tells you what to do next. Brain-dump a voice note and it sorts the contents into tasks, projects, and replies.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">The layers</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">Five layers, installed one at a time.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p>Each layer works on its own and delivers value before the next one starts. Most firms feel the difference after the first two.</p>
+        <ul class="mt-4 space-y-3 list-none">
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Context.</strong> The AI learns the business: clients, services, pricing, team, processes. One or two structured interview sessions plus a review of your documents. This is the foundation; without it every answer is generic.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Data.</strong> Accounting, CRM, spreadsheets, whatever you actually use, connected so the AI pulls fresh numbers daily. "What does Client X owe me?" gets a real answer.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Intelligence.</strong> Calendar, meeting transcripts, and communications. The AI tracks what was discussed, decided, and promised, and turns it into briefs and prep docs.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Automation.</strong> We audit every recurring task in your week, score each for automation, and build them one at a time starting with the biggest time savings. Two to four per month is the usual pace.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Governance and build.</strong> Access rules, retention, an AI usage policy the team can follow, and then the growth work you finally have bandwidth for.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">The install</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">How JamesTech installs one: Review, Build, Train.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p><strong>1. AI Opportunity Review.</strong> About a week. We walk through how work actually moves in your firm, find the manual and repetitive parts, and rank three to five automations by the hours and dollars each gives back. You get a written roadmap you own whether or not we go further. From $2,500, credited in full toward the build.</p>
+        <p><strong>2. Build.</strong> Two to three weeks for a first install: the context layer, one or two data sources, the daily brief, and the first automations from the roadmap. Built on Microsoft 365, Power Automate, Power Apps, Dataverse, and SharePoint, so it lives inside your tenant and your existing licenses.</p>
+        <p><strong>3. Train.</strong> Your team learns to run it and to build the next automation themselves. That is the part most vendors skip, and it is the reason the case study on this site ends with a team member automating a 40-hour task on her own.</p>
+        <p>After the install, most firms continue on a retainer (from $3,700 a month) that adds two to four automations a month, a monthly plain-English status report, and ownership of the AI roadmap. Some take the roadmap and run. Both are fine.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">Compare</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">Done-for-you, do-it-yourself, or a consultant.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p>Three ways to get here. The right one depends on how much of your own time you can spend and whether anyone on the team wants to own it afterward.</p>
+        <div class="mt-6 glass rounded-2xl p-2 sm:p-4 overflow-x-auto">
+        <table class="cmp">
+          <tr><th></th><th>JamesTech install</th><th>Do it yourself</th><th>Generic AI consultant</th></tr>
+          <tr><td>Knows your full business context</td><td>Yes, built in the first two sessions</td><td>Eventually, if you keep at it</td><td>Depends on the engagement</td></tr>
+          <tr><td>Built on tools you already own</td><td>Microsoft 365 and Power Platform</td><td>Whatever you pick</td><td>Often a new platform to buy</td></tr>
+          <tr><td>Time from start to first automation</td><td>Two to three weeks</td><td>Months of evenings</td><td>Varies; strategy decks first</td></tr>
+          <tr><td>Who can maintain it afterward</td><td>Your team, trained on real work</td><td>You</td><td>The consultant</td></tr>
+          <tr><td>Cost to start</td><td>Review from $2,500, credited to the build</td><td>Your time plus subscriptions</td><td>Typically $5,000 and up before anything runs</td></tr>
+          <tr><td>Data stays in your tenant</td><td>Yes</td><td>Yes, if you set it up that way</td><td>Ask</td></tr>
+        </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">Fit</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">Who this is for, and who it is not for.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p>It fits solo consultants and small firm owners who are the rainmaker, the doer, and the admin at the same time. It fits practice leaders inside larger organizations who run a P&amp;L with 5 to 20 people and no admin support. And it fits professional services firms (law, accounting, financial advice, coaching) where time is the product and every hour on operations is an hour not billed.</p>
+        <p>What you need: a business that is actually running, some digital tools already in place (email, calendar, some kind of accounting), and 60 to 90 minutes for each setup session. What you do not need: technical skills, a big team, or new software.</p>
+        <p>It is a poor fit for a startup idea with no operations yet, and for firms that want a chatbot on the website and nothing more. Those are cheaper problems with cheaper answers.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">Where we are</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">Columbia, Maryland, in person or remote.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p>JamesTech LLC is at 10015 Old Columbia Road in Columbia, Maryland, and works with firms across Howard County and the Baltimore-Washington corridor in person, and with firms anywhere remotely. Founder Mark Lucas has built on the Microsoft stack for roughly thirty years, including three years as a Microsoft employee, and is an Artemis program contractor at NASA.</p>
+        <p>If you would rather learn to build the first layers yourself, the half-day <a href="/ai-training-columbia-md.html" class="underline text-blue hover:text-navy">AI Operating System training class</a> in Columbia does exactly that. If you want someone to own the whole AI program part-time, see the <a href="/fractional-ai-officer.html" class="underline text-blue hover:text-navy">Fractional AI Officer</a> page.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="relative py-16">
+  <div class="max-w-2xl mx-auto px-6">
+    <span class="mono-label reveal">Questions</span>
+    <h2 class="reveal mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">The honest answers.</h2>
+    <div class="reveal mt-6">
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">How does a small business get an AI operating system?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">An AI operating system is the connected layer of business context, data, and automations that lets AI do recurring work across the tools a company already uses, instead of one-off chatbot prompts. JamesTech LLC installs one for small businesses in three steps: an AI Opportunity Review that ranks automations by hours and dollars returned, a scoped build on Microsoft 365 and Power Platform, and training so the team runs it themselves.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">Is an AI operating system the same as ChatGPT or Copilot?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">No. ChatGPT and Copilot are the engines. An AI operating system is what you build around one so it knows your clients, your numbers, and your processes, and can act on them. Without that layer, every conversation starts from zero.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">Do we have to replace our current software?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">No. The install connects to what you already run: Microsoft 365, Power Platform, your accounting system, your calendar. Nothing moves. The AI reads from those systems and writes back to them through automations you approve.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">How long does an install take?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">The Review takes about a week. A first build, with the context layer, one or two data sources, and the first two to four automations, typically runs two to three weeks. Automations keep landing after that at two to four per month on a retainer.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">What does it cost?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">The AI Opportunity Review starts at $2,500 and is credited in full toward the build. Builds are scoped from the roadmap, so you see the price before any work starts. Ongoing retainers start at $3,700 a month.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">Is our data safe?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">Your data stays in your Microsoft tenant and your own systems. Mark has handled Controlled Unclassified Information for NASA and delivered for the DOJ and NATO. Access, retention, and compliance constraints are documented in the roadmap and flagged on every recommendation.</p>
+      </details>
+    </div>
+  </div>
+</section>
+<!-- CTA -->
+<section class="relative py-20 mt-8 border-t border-navy/10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-2xl mx-auto px-6 text-center">
+    <h2 class="reveal font-display font-semibold tracking-tight text-[28px] md:text-[38px] text-navy leading-[1.05]">Find out which three automations to build <span class="font-serif italic font-normal text-blue">first</span>.</h2>
+    <p class="reveal mt-5 text-ink/70 text-[16px] leading-relaxed max-w-lg mx-auto">The AI Opportunity Review is the first step of every install. You come away with a ranked roadmap you keep either way.</p>
+    <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="reveal btn-gold inline-block mt-8 px-8 py-4 text-[15px]">Book your AI Opportunity Review</a>
+    <p class="reveal mt-4"><a href="/" class="text-sm text-blue hover:text-navy transition font-medium">&larr; Back to JamesTech</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-navy/10 py-10">
+  <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink/50">
+    <div class="flex items-center gap-3">
+      <span class="jt-badge w-7 h-7 pt-[4px]"><span class="jt text-[13px]">JT</span><span class="jt-ai text-[6px] ml-[1px]">AI</span></span>
+      <span class="font-display font-semibold text-navy">JamesTech</span>
+    </div>
+    <p>Mark Lucas &middot; JamesTech LLC &middot; Columbia, MD</p>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('active'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = Math.min(i % 5, 4) * 60 + 'ms';
+    io.observe(el);
+  });
+</script>
+</body>
+</html>
