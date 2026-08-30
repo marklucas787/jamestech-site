@@ -1,6 +1,6 @@
 # JamesTech LLC
 
-> AI automation consulting and Microsoft Power Platform builds for 5 to 50 person firms in and around Columbia, Maryland.
+> AI automation consulting and Microsoft Power Platform builds for 5 to 200 person firms in and around Columbia, Maryland.
 
 JamesTech LLC installs an AI Operating System for small businesses: the context, data, automations, and agents that let AI do recurring work inside the Microsoft 365 and Power Platform tools a firm already owns. Engagements start with an AI Opportunity Review, continue with a scoped build, and can extend to a Fractional AI Officer retainer or a half-day AI Operating System training class. Founder Mark Lucas has built on the Microsoft stack for roughly thirty years, including three years as a Microsoft employee, and is an Artemis program contractor at NASA via The Aerospace Corporation.
 
@@ -15,7 +15,7 @@ JamesTech LLC installs an AI Operating System for small businesses: the context,
 ## Key Pages
 
 - [AI Opportunity Review](https://jamestech.com/): From $2,500, credited toward the build. Leave with 3 to 5 quantified automation opportunities ranked by hours and dollars returned.
-- [AI Operating System Training Class](https://jamestech.com/ai-training.html): Half-day, in-person class in Columbia, MD for owners and practice leaders of 5 to 50 person firms. Walk out with a working AI Operating System, not notes.
+- [AI Operating System Training Class](https://jamestech.com/ai-training.html): Half-day, in-person class in Columbia, MD for owners and practice leaders of 5 to 200 person firms. Walk out with a working AI Operating System, not notes.
 - [Case Study: Coaching That Ends With the Work Automated](https://jamestech.com/case-study.html): A global financial-services team went from stalled vendor training to building their own automations; one 40-hour task now runs in minutes.
 - [Privacy Policy](https://jamestech.com/privacy.html)
 - [Terms and Messaging](https://jamestech.com/terms.html)
