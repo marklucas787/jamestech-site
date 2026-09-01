@@ -1,0 +1,4 @@
+{
+  "_comment": "Blog manifest, maintained by the AIOS blog relay (scripts/blog_relay.py). Newest first. The relay renders index cards, sitemap entries, and llms.txt lines from this file.",
+  "posts": []
+}

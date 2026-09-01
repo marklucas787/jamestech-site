@@ -23,6 +23,12 @@ JamesTech LLC installs an AI Operating System for small businesses: the context,
 - [Privacy Policy](https://jamestech.com/privacy.html)
 - [Terms and Messaging](https://jamestech.com/terms.html)
 
+## Blog
+
+- [The JamesTech Blog](https://jamestech.com/blog/): Practical writing on AI automation, Microsoft Power Platform, and the AI Operating System for 5 to 200 person firms.
+<!-- BLOG-POSTS:BEGIN (managed by AIOS blog relay) -->
+<!-- BLOG-POSTS:END -->
+
 ## About
 
 Mark Lucas, founder of JamesTech LLC (owned since 2001), Columbia, Maryland. Microsoft certified. Has delivered for NASA's Artemis program, the Department of Justice, NATO, and a global financial-services firm. Builds on Power Automate, Power Apps, Dataverse, and SharePoint daily.
