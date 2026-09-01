@@ -1,4 +1,13 @@
 {
-  "_comment": "Blog manifest, maintained by the AIOS blog relay (scripts/blog_relay.py). Newest first. The relay renders index cards, sitemap entries, and llms.txt lines from this file.",
-  "posts": []
+ "_comment": "Blog manifest, maintained by the AIOS blog relay (scripts/blog_relay.py). Newest first. The relay renders index cards, sitemap entries, and llms.txt lines from this file.",
+ "posts": [
+  {
+   "slug": "real-cost-manual-data-entry-small-nonprofits",
+   "title": "The Real Cost of Manual Data Entry in Small Nonprofits (And How to Fix It)",
+   "description": "Learn how small nonprofits can reduce manual data-entry costs, prevent errors, and improve donor service with practical workflow automation.",
+   "tag": "Workflow Automation",
+   "date": "2026-08-31",
+   "date_human": "August 31, 2026"
+  }
+ ]
 }
