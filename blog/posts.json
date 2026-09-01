@@ -2,6 +2,14 @@
  "_comment": "Blog manifest, maintained by the AIOS blog relay (scripts/blog_relay.py). Newest first. The relay renders index cards, sitemap entries, and llms.txt lines from this file.",
  "posts": [
   {
+   "slug": "7-sharepoint-mistakes-permission-hell",
+   "title": "7 SharePoint Mistakes You\u2019re Making (And How to Fix Your \"Permission Hell\")",
+   "description": "Learn seven common SharePoint mistakes nonprofits and small businesses make, plus practical fixes for permissions, governance, folders, and metadata.",
+   "tag": "SharePoint",
+   "date": "2026-08-31",
+   "date_human": "August 31, 2026"
+  },
+  {
    "slug": "evolution-automation-early-sharepoint-modern-voice-ai",
    "title": "The Evolution of Automation: From Early SharePoint to Modern Voice AI",
    "description": "Mark Lucas traces business automation from early SharePoint workflows to connected Microsoft 365 tools, n8n, AI Builder, Copilot, and Voice AI.",

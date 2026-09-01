@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>7 SharePoint Mistakes You’re Making (And How to Fix Your "Permission Hell") | JamesTech</title>
+<meta name="description" content="Learn seven common SharePoint mistakes nonprofits and small businesses make, plus practical fixes for permissions, governance, folders, and metadata." />
+<link rel="canonical" href="https://jamestech.com/blog/7-sharepoint-mistakes-permission-hell.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="7 SharePoint Mistakes You’re Making (And How to Fix Your "Permission Hell")" />
+<meta property="og:description" content="Learn seven common SharePoint mistakes nonprofits and small businesses make, plus practical fixes for permissions, governance, folders, and metadata." />
+<meta property="og:url" content="https://jamestech.com/blog/7-sharepoint-mistakes-permission-hell.html" />
+<meta property="og:image" content="https://jamestech.com/assets/jt-ai-icon-512.png" />
+<meta property="article:published_time" content="2026-08-31T21:17:07.897378-04:00" />
+<meta property="article:author" content="Mark Lucas" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/jt-ai-icon.png" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['Manrope', 'sans-serif'],
+          serif: ['"Instrument Serif"', 'serif'],
+          mono: ['"Space Grotesk"', 'monospace'],
+        },
+        colors: {
+          navy: '#0E2C6E', blue: '#2A66D6', blue2: '#1A48A6', lblue: '#4D8DF0',
+          gold: '#FFC836', gold2: '#FFB200', ink: '#0E1726', slate: '#5B6B86', mist: '#F4F7FC',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root { --line: rgba(14,44,110,0.10); --line2: rgba(14,44,110,0.18); --blue:#2A66D6; --navy:#0E2C6E; --gold:#FFC836; --gold2:#FFB200; }
+  html { scroll-behavior: smooth; }
+  body { background:#FFFFFF; color:#0E1726; font-family:'Manrope',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  ::selection { background: var(--gold); color: var(--navy); }
+  .jt-badge { border-radius:30%; background:linear-gradient(135deg,#1A48A6,#0E2C6E); display:inline-flex; align-items:flex-start; justify-content:center; flex:none; }
+  .jt-badge .jt { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-.04em; color:#fff; line-height:1; }
+  .jt-badge .jt-ai { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-.02em; color:#FFC836; line-height:1; }
+  .mono-label { font-family:'Space Grotesk',monospace; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.24em; color:var(--blue); }
+  .glass { background:#FFFFFF; border:1px solid var(--line); box-shadow:0 1px 2px rgba(14,44,110,0.04), 0 18px 40px -28px rgba(14,44,110,0.30); }
+  .soft-card { background:#FFFFFF; border:1px solid var(--line); box-shadow:0 1px 2px rgba(14,44,110,0.03); }
+  .aura { position:absolute; inset:0; pointer-events:none; }
+  .aura::before { content:''; position:absolute; width:560px; height:560px; left:-160px; top:-200px; background:radial-gradient(circle, rgba(42,102,214,0.12), transparent 60%); filter:blur(44px); }
+  .aura::after { content:''; position:absolute; width:520px; height:520px; right:-150px; bottom:-180px; background:radial-gradient(circle, rgba(255,200,54,0.14), transparent 60%); filter:blur(50px); }
+  .btn-gold { background:linear-gradient(180deg,var(--gold),var(--gold2)); color:var(--navy); font-weight:700; border-radius:10px; transition:transform .25s, box-shadow .25s, filter .25s; box-shadow:0 10px 30px -8px rgba(255,178,0,0.55); }
+  .btn-gold:hover { transform:translateY(-2px); filter:brightness(1.03); box-shadow:0 16px 40px -8px rgba(255,178,0,0.7); }
+  .quote { border-left:3px solid var(--gold); padding:4px 0 4px 22px; }
+  .reveal { opacity:0; filter:blur(6px); transform:translateY(20px); transition:all .9s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.active { opacity:1; filter:blur(0); transform:translateY(0); }
+
+  /* Post prose — the relay emits plain semantic HTML; these rules style it to match the site. */
+  .post-body { color:rgba(14,23,38,0.78); font-size:16px; line-height:1.75; }
+  .post-body > * + * { margin-top:1.15em; }
+  .post-body h2 { font-family:'Space Grotesk',sans-serif; font-weight:600; color:var(--navy); font-size:26px; line-height:1.2; margin-top:2em; letter-spacing:-.01em; }
+  .post-body h3 { font-family:'Space Grotesk',sans-serif; font-weight:600; color:var(--navy); font-size:20px; line-height:1.25; margin-top:1.7em; }
+  .post-body a { color:var(--blue); text-decoration:underline; text-underline-offset:2px; }
+  .post-body a:hover { color:var(--navy); }
+  .post-body strong { color:rgba(14,23,38,0.92); }
+  .post-body ul, .post-body ol { padding-left:1.4em; }
+  .post-body ul { list-style:disc; }
+  .post-body ol { list-style:decimal; }
+  .post-body li + li { margin-top:.5em; }
+  .post-body blockquote { border-left:3px solid var(--gold); padding:4px 0 4px 22px; font-style:italic; color:rgba(14,23,38,0.8); font-size:17px; }
+  .post-body code { font-family:'Space Grotesk',monospace; font-size:14px; background:var(--mist, #F4F7FC); background:#F4F7FC; border:1px solid var(--line); border-radius:6px; padding:2px 6px; }
+  .post-body pre { background:#F4F7FC; border:1px solid var(--line); border-radius:12px; padding:16px 18px; overflow-x:auto; }
+  .post-body pre code { background:none; border:none; padding:0; }
+  .post-body hr { border:none; border-top:1px solid var(--line); margin-top:2em; }
+  .post-body img { max-width:100%; border-radius:12px; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "7 SharePoint Mistakes You’re Making (And How to Fix Your "Permission Hell")",
+  "description": "Learn seven common SharePoint mistakes nonprofits and small businesses make, plus practical fixes for permissions, governance, folders, and metadata.",
+  "datePublished": "2026-08-31T21:17:07.897378-04:00",
+  "url": "https://jamestech.com/blog/7-sharepoint-mistakes-permission-hell.html",
+  "image": "https://jamestech.com/assets/jt-ai-icon-512.png",
+  "isPartOf": { "@id": "https://jamestech.com/blog/#blog" },
+  "author": { "@id": "https://jamestech.com/#mark-lucas" },
+  "publisher": { "@id": "https://jamestech.com/#org" }
+}
+</script>
+</head>
+<body class="font-body antialiased">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="mt-4 glass rounded-xl flex items-center justify-between px-5 py-3">
+      <a href="/" class="flex items-center gap-3">
+        <span class="jt-badge w-9 h-9 pt-[5px]"><span class="jt text-[17px]">JT</span><span class="jt-ai text-[8px] ml-[2px] mt-[1px]">AI</span></span>
+        <span class="flex flex-col leading-none">
+          <span class="font-display font-bold text-navy text-[15px] tracking-tight">JamesTech</span>
+          <span class="font-body text-[9px] tracking-[0.16em] uppercase text-slate mt-[3px]">Since 2001</span>
+        </span>
+      </a>
+      <div class="flex items-center gap-5">
+        <a href="/blog/" class="hidden sm:inline text-sm font-medium text-ink/70 hover:text-navy transition">Blog</a>
+        <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="btn-gold text-sm px-4 py-2">Book the Review</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative pt-36 pb-10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-3xl mx-auto px-6">
+    <div class="reveal"><span class="mono-label">SharePoint &middot; August 31, 2026 &middot; 4 min read</span></div>
+    <h1 class="reveal mt-6 font-display font-semibold tracking-tighter leading-[1.05] text-[32px] sm:text-[42px] text-navy">7 SharePoint Mistakes You’re Making (And How to Fix Your "Permission Hell")</h1>
+    <p class="reveal mt-5 text-[14px] text-ink/60">By <strong class="text-ink/85">Mark Lucas</strong>, founder of JamesTech LLC, Columbia, MD. Roughly thirty years on the Microsoft stack, three of them at Microsoft.</p>
+  </div>
+</section>
+
+<!-- BODY -->
+<article class="relative pb-8">
+  <div class="max-w-2xl mx-auto px-6">
+    <div class="post-body">
+<p># 7 SharePoint Mistakes You’re Making (And How to Fix Your "Permission Hell")
+!<a href="https://cdn.marblism.com/wMbLufSkYZ4.webp">A diverse team of professionals collaborating in a bright, modern office with yellow accents</a>
+
+If you’re a nonprofit leader or a small business owner, you likely started using SharePoint with the best of intentions. You wanted a central place for your team to collaborate, share files, and stay organized. But somewhere between "Setting up the Board Site" and "Adding the Summer Intern," things went sideways.
+
+Now, you’re in "Permission Hell." Your Executive Director can’t access the finance report, a volunteer accidentally deleted a folder they shouldn’t have seen in the first place, and your "Shared Documents" library has more folders than a 1990s filing cabinet.
+
+At <a href="https://www.jamestechlab.com/">Velocity AI</a>, we specialize in <strong>IT solutions for small business</strong> and <strong>sharepoint for nonprofits</strong>. We’ve seen these mistakes a hundred times, and the good news is that they are fixable. Here are the seven most common SharePoint mistakes you’re making and the practical steps to fix them.
+
+## 1. Treating SharePoint Like a Traditional File Server (The "Folders" Trap)
+Most teams migrate to SharePoint by dragging their old "Z: Drive" or Dropbox folders directly into a single document library. While it feels familiar, this is the quickest path to a mess. 
+
+SharePoint is designed to be a flat structure of many sites and libraries, not one giant bucket of folders. When you have folders ten levels deep, the file paths become too long for Windows to handle, and finding anything through search becomes a nightmare.
+
+<strong>The Fix:</strong> Break your content into multiple Document Libraries or even separate Sites based on department or project (e.g., Finance, Programs, HR, Board of Directors).
+
+## 2. Breaking Permission Inheritance Constantly
+By default, every folder and file in a library "inherits" permissions from the library above it. When you click "Manage Access" and "Stop Inheriting Permissions" on a specific folder to hide it from a few people, you’ve just created a "unique permission."
+
+Do this 50 times, and you’ll never truly know who has access to what without clicking every single folder. This is the definition of "Permission Hell."
+
+!<a href="https://cdn.marblism.com/Z8RORLuf9SP.webp">Minimalist graphic showing digital security and permissions</a>
+
+<strong>The Fix:</strong> If a set of files needs different permissions, don’t just hide the folder: move those files to a different Document Library or a separate, private Site. Keeping permissions at the Site level makes management 10x easier.
+
+## 3. Adding Individual People Instead of Using Groups
+When you share a document with "sarah@nonprofit.org" directly, you’re creating extra work for yourself. When Sarah leaves the organization, you have to hunt down every single file she had access to and remove her.
+
+<strong>The Fix:</strong> Always use SharePoint Groups (Owners, Members, Visitors) or Microsoft 365 Groups. When a new staff member joins, you simply add them to the "Program Staff" group, and they automatically get access to everything they need.
+
+## 4. Choosing the Wrong Site Type
+Small businesses often make the mistake of using a <strong>Communication Site</strong> when they need to collaborate, or a <strong>Team Site</strong> for company-wide announcements.
+*   <strong>Team Sites</strong> are for "we" work: private groups collaborating on active files.
+*   <strong>Communication Sites</strong> are for "me" work: broadly sharing information (like an Intranet) with the whole organization where most people can only read, not edit.
+
+<strong>The Fix:</strong> Use Team Sites for departmental work and one central Communication Site as your <a href="https://www.jamestechlab.com/">modern SharePoint intranet</a>.
+
+## 5. Ignoring Metadata in Favor of Folders
+Folders only allow a file to live in one "place." Metadata (tags) allows you to filter and sort files by "Status," "Project Year," or "Document Type" without moving them. This is the secret weapon of <strong>sharepoint for nonprofits</strong> that need to track grants or donor records across different years.
+
+!<a href="https://cdn.marblism.com/sCY48L-e7Es.webp">Graphic showing the transition from messy folders to organized metadata</a>
+
+<strong>The Fix:</strong> Start small. Add one custom column to your main library, like "Document Type" (Contract, Policy, Report). You’ll be amazed at how much faster you can find files.
+
+## 6. Over-sharing via "Everyone except external users"
+In an effort to be helpful, many admins give "Edit" access to "Everyone except external users" on the main site. This means your newest volunteer or a temporary contractor can accidentally delete your most important templates or move folders into the recycle bin.
+
+<strong>The Fix:</strong> Follow the "Principle of Least Privilege." Give most people "Visitor" (Read-only) access to the main Intranet and "Member" (Edit) access only to the specific Team Sites they need for their daily work.
+
+## 7. The "Wild West" Effect (No Governance)
+If anyone in your organization can create a new SharePoint site or a new Microsoft Team, you will eventually end up with "Marketing," "Marketing-Final," and "Marketing_Old" sites. This confusion leads to data silos and security risks.
+
+!<a href="https://cdn.marblism.com/QZm2O1RQUiT.webp">Three professionals collaborating on a digital dashboard</a>
+
+<strong>The Fix:</strong> Establish a simple governance policy. Decide who is allowed to create sites and create a standard naming convention. At Velocity AI, we often act as a <a href="https://www.jamestechlab.com/">fractional CIO</a> for nonprofits to help set these "rules of the road" so the tech stays organized as the team grows.
+
+## How Velocity AI Can Help You Escape Permission Hell
+Managing SharePoint shouldn't be a full-time job for your Program Director. We provide <strong>IT solutions for small business</strong> that focus on simplicity and measurable value. 
+
+Whether you need a full SharePoint migration, a custom Power App built from your spreadsheets, or a 90-Minute AI Audit to see how automation can save your team 10+ hours a week, we’re here to help. We bridge the gap between Microsoft 365, Google Workspace, and tools like n8n to ensure your workflows are seamless.
+
+!<a href="https://cdn.marblism.com/KZGTv-lv72V.webp">A professional advisor offering fractional CIO services</a>
+
+Stop fighting your software and start letting it work for you. <a href="https://www.jamestechlab.com/">Contact Velocity AI today</a> to clean up your SharePoint and get back to focusing on your mission.
+
+---</p>
+    </div>
+  </div>
+</article>
+
+<!-- CTA -->
+<section class="relative py-20 mt-10 border-t border-navy/10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-2xl mx-auto px-6 text-center">
+    <h2 class="reveal font-display font-semibold tracking-tight text-[28px] md:text-[36px] text-navy leading-[1.05]">
+      Want this working inside <span class="font-serif italic font-normal text-blue">your</span> firm?
+    </h2>
+    <p class="reveal mt-5 text-ink/70 text-[16px] leading-relaxed max-w-lg mx-auto">
+      Start with an AI Opportunity Review. You'll come away with a prioritized roadmap of the automations worth building first, ranked by the hours and dollars each one gives back.
+    </p>
+    <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="reveal btn-gold inline-block mt-8 px-8 py-4 text-[15px]">Book your AI Opportunity Review</a>
+    <p class="reveal mt-4"><a href="/blog/" class="text-sm text-blue hover:text-navy transition font-medium">&larr; All posts</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-navy/10 py-10">
+  <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink/50">
+    <div class="flex items-center gap-3">
+      <span class="jt-badge w-7 h-7 pt-[4px]"><span class="jt text-[13px]">JT</span><span class="jt-ai text-[6px] ml-[1px]">AI</span></span>
+      <span class="font-display font-semibold text-navy">JamesTech</span>
+    </div>
+    <p>Mark Lucas &middot; JamesTech LLC &middot; Columbia, MD</p>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('active'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = Math.min(i % 5, 4) * 60 + 'ms';
+    io.observe(el);
+  });
+</script>
+</body>
+</html>
