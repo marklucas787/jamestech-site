@@ -27,6 +27,7 @@ JamesTech LLC installs an AI Operating System for small businesses: the context,
 
 - [The JamesTech Blog](https://jamestech.com/blog/): Practical writing on AI automation, Microsoft Power Platform, and the AI Operating System for 5 to 200 person firms.
 <!-- BLOG-POSTS:BEGIN (managed by AIOS blog relay) -->
+- [The Evolution of Automation: From Early SharePoint to Modern Voice AI](https://jamestech.com/blog/evolution-automation-early-sharepoint-modern-voice-ai.html): Mark Lucas traces business automation from early SharePoint workflows to connected Microsoft 365 tools, n8n, AI Builder, Copilot, and Voice AI.
 - [The Real Cost of Manual Data Entry in Small Nonprofits (And How to Fix It)](https://jamestech.com/blog/real-cost-manual-data-entry-small-nonprofits.html): Learn how small nonprofits can reduce manual data-entry costs, prevent errors, and improve donor service with practical workflow automation.
 <!-- BLOG-POSTS:END -->
 

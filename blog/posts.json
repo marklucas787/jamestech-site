@@ -2,6 +2,14 @@
  "_comment": "Blog manifest, maintained by the AIOS blog relay (scripts/blog_relay.py). Newest first. The relay renders index cards, sitemap entries, and llms.txt lines from this file.",
  "posts": [
   {
+   "slug": "evolution-automation-early-sharepoint-modern-voice-ai",
+   "title": "The Evolution of Automation: From Early SharePoint to Modern Voice AI",
+   "description": "Mark Lucas traces business automation from early SharePoint workflows to connected Microsoft 365 tools, n8n, AI Builder, Copilot, and Voice AI.",
+   "tag": "AI Automation",
+   "date": "2026-08-31",
+   "date_human": "August 31, 2026"
+  },
+  {
    "slug": "real-cost-manual-data-entry-small-nonprofits",
    "title": "The Real Cost of Manual Data Entry in Small Nonprofits (And How to Fix It)",
    "description": "Learn how small nonprofits can reduce manual data-entry costs, prevent errors, and improve donor service with practical workflow automation.",

@@ -8,6 +8,7 @@
   <url><loc>https://jamestech.com/case-study.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://jamestech.com/blog/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <!-- BLOG-POSTS:BEGIN (managed by AIOS blog relay) -->
+  <url><loc>https://jamestech.com/blog/evolution-automation-early-sharepoint-modern-voice-ai.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://jamestech.com/blog/real-cost-manual-data-entry-small-nonprofits.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <!-- BLOG-POSTS:END -->
   <url><loc>https://jamestech.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
