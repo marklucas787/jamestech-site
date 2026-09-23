@@ -27,6 +27,7 @@ JamesTech LLC installs an AI Operating System for small businesses: the context,
 
 - [The JamesTech Blog](https://jamestech.com/blog/): Practical writing on AI automation, Microsoft Power Platform, and the AI Operating System for 5 to 200 person firms.
 <!-- BLOG-POSTS:BEGIN (managed by AIOS blog relay) -->
+- [AI Automation for Financial Advisors: What to Automate First](https://jamestech.com/blog/ai-automation-financial-advisors-what-to-automate-first.html): Learn which financial-advisor workflows to automate first with AI, Power Automate, AI Builder, and n8n, while keeping judgment human-led.
 - [Microsoft 365 Automation for Financial Services Firms](https://jamestech.com/blog/microsoft-365-automation-financial-services-firms.html): See how Microsoft 365, SharePoint, Teams, Power Automate, and Copilot can make financial-services operations secure, governed, and audit-ready.
 - [7 SharePoint Mistakes You’re Making (And How to Fix Your "Permission Hell")](https://jamestech.com/blog/7-sharepoint-mistakes-permission-hell.html): Learn seven common SharePoint mistakes nonprofits and small businesses make, plus practical fixes for permissions, governance, folders, and metadata.
 - [The Evolution of Automation: From Early SharePoint to Modern Voice AI](https://jamestech.com/blog/evolution-automation-early-sharepoint-modern-voice-ai.html): Mark Lucas traces business automation from early SharePoint workflows to connected Microsoft 365 tools, n8n, AI Builder, Copilot, and Voice AI.
