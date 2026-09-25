@@ -6,6 +6,8 @@ JamesTech LLC installs an AI Operating System for small businesses: the context,
 
 ## Core Topics
 
+- Agentic AI management: governance, ownership, and monitoring of AI agents (Maryland)
+- Microsoft 365 solutions: SharePoint, Teams, Power Platform, Copilot setup and tenant cleanup (Maryland)
 - AI operating system for small business (what it is, how it is installed)
 - Fractional AI Officer retainers (Maryland)
 - AI training for small business owners (Columbia, MD, half-day class)
@@ -16,6 +18,8 @@ JamesTech LLC installs an AI Operating System for small businesses: the context,
 
 - [AI Operating System for Small Business](https://jamestech.com/ai-operating-system.html): What it is, the five layers, what it costs, how JamesTech installs one in three steps.
 - [Fractional AI Officer for Maryland Firms](https://jamestech.com/fractional-ai-officer.html): Part-time ownership of AI strategy, governance, and rollout; retainers from $3,700 a month.
+- [Agentic AI Management for Maryland Firms](https://jamestech.com/agentic-ai-management.html): Inventory, named owners, least-privilege identities, human review points, a written AI use policy, monitoring, and the builds themselves, for the AI agents a 5 to 200 person firm runs inside Microsoft 365. The firm's IT provider keeps the perimeter; JamesTech runs the agents.
+- [Microsoft 365 Solutions for Maryland Firms](https://jamestech.com/microsoft-365-solutions.html): SharePoint, Teams, Power Automate, Power Apps, and Copilot set up around how the firm works, plus tenant housekeeping (idle seats, admin roles, permissions) and training. Assess, build, hand over.
 - [AI Operating System Training Class, Columbia MD](https://jamestech.com/ai-training-columbia-md.html): Half-day, in-person, six seats; leave with a working system.
 - [AI Opportunity Review](https://jamestech.com/): From $2,500, credited toward the build. Leave with 3 to 5 quantified automation opportunities ranked by hours and dollars returned.
 - [AI Operating System Training Class](https://jamestech.com/ai-training.html): Half-day, in-person class in Columbia, MD for owners and practice leaders of 5 to 200 person firms. Walk out with a working AI Operating System, not notes.
@@ -27,6 +31,7 @@ JamesTech LLC installs an AI Operating System for small businesses: the context,
 
 - [The JamesTech Blog](https://jamestech.com/blog/): Practical writing on AI automation, Microsoft Power Platform, and the AI Operating System for 5 to 200 person firms.
 <!-- BLOG-POSTS:BEGIN (managed by AIOS blog relay) -->
+- [What Walks Out the Door When Your Best Employee Leaves?](https://jamestech.com/blog/what-walks-out-the-door-when-your-best-employee-leaves.html): When the person who knows how everything works leaves, the firm loses what it never wrote down. How to capture institutional knowledge in Microsoft 365 and SharePoint so AI can answer from it.
 - [AI Automation for Financial Advisors: What to Automate First](https://jamestech.com/blog/ai-automation-financial-advisors-what-to-automate-first.html): Learn which financial-advisor workflows to automate first with AI, Power Automate, AI Builder, and n8n, while keeping judgment human-led.
 - [Microsoft 365 Automation for Financial Services Firms](https://jamestech.com/blog/microsoft-365-automation-financial-services-firms.html): See how Microsoft 365, SharePoint, Teams, Power Automate, and Copilot can make financial-services operations secure, governed, and audit-ready.
 - [7 SharePoint Mistakes You’re Making (And How to Fix Your "Permission Hell")](https://jamestech.com/blog/7-sharepoint-mistakes-permission-hell.html): Learn seven common SharePoint mistakes nonprofits and small businesses make, plus practical fixes for permissions, governance, folders, and metadata.

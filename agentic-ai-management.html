@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Agentic AI Management for Maryland Firms: Who Owns Your AI Agents? | JamesTech</title>
+<meta name="description" content="AI agents need a named owner, only the access they need, a person checking the work, and a written policy. JamesTech LLC builds and manages the AI agents 5 to 200 person firms run inside Microsoft 365. Columbia, Maryland." />
+<link rel="canonical" href="https://jamestech.com/agentic-ai-management.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Agentic AI Management for Maryland Firms: Who Owns Your AI Agents? | JamesTech" />
+<meta property="og:description" content="AI agents need a named owner, only the access they need, a person checking the work, and a written policy. JamesTech LLC builds and manages the AI agents 5 to 200 person firms run inside Microsoft 365. Columbia, Maryland." />
+<meta property="og:url" content="https://jamestech.com/agentic-ai-management.html" />
+<meta property="og:image" content="https://jamestech.com/assets/jt-ai-icon-512.png" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/jt-ai-icon.png" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['Manrope', 'sans-serif'],
+          serif: ['"Instrument Serif"', 'serif'],
+          mono: ['"Space Grotesk"', 'monospace'],
+        },
+        colors: {
+          navy: '#0E2C6E', blue: '#2A66D6', blue2: '#1A48A6', lblue: '#4D8DF0',
+          gold: '#FFC836', gold2: '#FFB200', ink: '#0E1726', slate: '#5B6B86', mist: '#F4F7FC',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root { --line: rgba(14,44,110,0.10); --line2: rgba(14,44,110,0.18); --blue:#2A66D6; --navy:#0E2C6E; --gold:#FFC836; --gold2:#FFB200; }
+  html { scroll-behavior: smooth; }
+  body { background:#FFFFFF; color:#0E1726; font-family:'Manrope',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  ::selection { background: var(--gold); color: var(--navy); }
+
+  .jt-badge { border-radius:30%; background:linear-gradient(135deg,#1A48A6,#0E2C6E); display:inline-flex; align-items:flex-start; justify-content:center; flex:none; }
+  .jt-badge .jt { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-.04em; color:#fff; line-height:1; }
+  .jt-badge .jt-ai { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-.02em; color:#FFC836; line-height:1; }
+
+  .mono-label { font-family:'Space Grotesk',monospace; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.24em; color:var(--blue); }
+  .glass { background:#FFFFFF; border:1px solid var(--line); box-shadow:0 1px 2px rgba(14,44,110,0.04), 0 18px 40px -28px rgba(14,44,110,0.30); }
+  .soft-card { background:#FFFFFF; border:1px solid var(--line); box-shadow:0 1px 2px rgba(14,44,110,0.03); }
+  .aura { position:absolute; inset:0; pointer-events:none; }
+  .aura::before { content:''; position:absolute; width:560px; height:560px; left:-160px; top:-200px; background:radial-gradient(circle, rgba(42,102,214,0.12), transparent 60%); filter:blur(44px); }
+  .aura::after { content:''; position:absolute; width:520px; height:520px; right:-150px; bottom:-180px; background:radial-gradient(circle, rgba(255,200,54,0.14), transparent 60%); filter:blur(50px); }
+
+  .btn-gold { background:linear-gradient(180deg,var(--gold),var(--gold2)); color:var(--navy); font-weight:700; border-radius:10px; transition:transform .25s, box-shadow .25s, filter .25s; box-shadow:0 10px 30px -8px rgba(255,178,0,0.55); }
+  .btn-gold:hover { transform:translateY(-2px); filter:brightness(1.03); box-shadow:0 16px 40px -8px rgba(255,178,0,0.7); }
+  .btn-ghost { border:1px solid var(--line2); color:var(--navy); border-radius:10px; transition:background .25s, border-color .25s; }
+  .btn-ghost:hover { background:rgba(42,102,214,0.06); border-color:var(--blue); }
+
+  .quote { border-left:3px solid var(--gold); padding:4px 0 4px 22px; }
+  .reveal { opacity:0; filter:blur(6px); transform:translateY(20px); transition:all .9s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.active { opacity:1; filter:blur(0); transform:translateY(0); }
+  table.cmp { width:100%; border-collapse:collapse; font-size:15px; }
+  table.cmp th { text-align:left; font-family:'Space Grotesk',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.14em; color:var(--slate); padding:10px 12px; border-bottom:1px solid var(--line2); }
+  table.cmp td { padding:12px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.cmp td:first-child { color:var(--slate); font-size:14px; width:34%; }
+  table.cmp tr:last-child td { border-bottom:none; }
+  details { border-bottom:1px solid var(--line); }
+  details summary { cursor:pointer; list-style:none; }
+  details summary::-webkit-details-marker { display:none; }
+  details[open] .plus { transform:rotate(45deg); }
+  .plus { transition:transform .25s; color:var(--blue); }
+  .prose p { margin-top:1rem; }
+  .rule-num { font-family:'Space Grotesk',sans-serif; font-weight:700; color:var(--gold2); font-size:13px; letter-spacing:.08em; }
+</style>
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://jamestech.com/#org",
+      "name": "JamesTech LLC",
+      "url": "https://jamestech.com",
+      "email": "info@jamestech.com",
+      "telephone": "+1-240-363-2961",
+      "logo": "https://jamestech.com/assets/jt-ai-icon-512.png",
+      "address": { "@type": "PostalAddress", "addressLocality": "Columbia", "addressRegion": "MD", "addressCountry": "US" },
+      "areaServed": [ "Columbia MD", "Howard County MD", "Maryland", "Baltimore-Washington corridor" ],
+      "founder": { "@id": "https://jamestech.com/#mark-lucas" },
+      "description": "AI automation consulting and Microsoft Power Platform builds for 5 to 200 person firms. AI Opportunity Review, AI Operating System installs, Agentic AI Management, Microsoft 365 solutions, Fractional AI Officer retainers, and AI training in Columbia, Maryland."
+    },
+    {
+      "@type": "Person",
+      "@id": "https://jamestech.com/#mark-lucas",
+      "name": "Mark Lucas",
+      "jobTitle": "Founder and Lead Consultant",
+      "worksFor": { "@id": "https://jamestech.com/#org" },
+      "url": "https://jamestech.com",
+      "knowsAbout": [ "Microsoft Power Platform", "Power Automate", "Power Apps", "Dataverse", "SharePoint Online", "Copilot Studio", "AI agents", "AI governance for small business", "AI operating systems" ],
+      "description": "Founder of JamesTech LLC in Columbia, Maryland. Roughly thirty years building on the Microsoft stack, including three years as a Microsoft employee. Artemis program contractor at NASA via The Aerospace Corporation."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://jamestech.com/agentic-ai-management.html#service",
+      "name": "Agentic AI Management",
+      "serviceType": "AI agent governance, build, and management",
+      "provider": { "@id": "https://jamestech.com/#org" },
+      "areaServed": "Maryland",
+      "audience": { "@type": "BusinessAudience", "name": "5 to 200 person firms" },
+      "url": "https://jamestech.com/agentic-ai-management.html",
+      "description": "Inventory, ownership, least-privilege identities, human review, a written AI use policy, monitoring, and the builds themselves, for the AI agents a firm runs inside Microsoft 365."
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is agentic AI management?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Agentic AI management is the ongoing work of owning the AI agents a business runs: keeping an inventory of them, giving each one a named human owner and only the access it needs, deciding which steps a person reviews, writing the AI use policy, watching what the agents do, and building the next one. JamesTech LLC provides it to 5 to 200 person firms in and around Columbia, Maryland." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is this different from what our IT provider or MSP does?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Your IT provider keeps the perimeter and the machines: logins, devices, network, backups, monitoring. JamesTech owns what the AI agents do on top of that layer: the use cases, the workflows, the permissions each agent holds, the human review points, the policy, and the training. The two fit together, and the line is drawn by workload, not by vendor." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI platforms do you manage?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Microsoft Copilot and Copilot Studio, Claude, ChatGPT, and custom agents built on Power Automate, Power Apps, Dataverse, and n8n. Most agents JamesTech builds live inside the firm's own Microsoft 365 tenant and read from SharePoint." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does every agent need a person approving its work?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Some work should run fully automated, such as a reminder that fires when a report is late. Other work should stop and wait for a person, such as anything that touches money, personnel, or a message going out under the firm's name. Deciding which is which, in writing, is the first job." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do we start?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most firms start with the AI Opportunity Review, which produces the first roadmap and the first agent inventory. Ongoing management usually runs under a Fractional AI Officer retainer, scoped to the size of the firm." }
+    }
+  ]
+}
+</script>
+</head>
+<body class="font-body antialiased">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="mt-4 glass rounded-xl flex items-center justify-between px-5 py-3">
+      <a href="/" class="flex items-center gap-3">
+        <span class="jt-badge w-9 h-9 pt-[5px]"><span class="jt text-[17px]">JT</span><span class="jt-ai text-[8px] ml-[2px] mt-[1px]">AI</span></span>
+        <span class="flex flex-col leading-none">
+          <span class="font-display font-bold text-navy text-[15px] tracking-tight">JamesTech</span>
+          <span class="font-body text-[9px] tracking-[0.16em] uppercase text-slate mt-[3px]">Since 2001</span>
+        </span>
+      </a>
+      <div class="flex items-center gap-5">
+        <a href="/microsoft-365-solutions.html" class="hidden sm:inline text-sm font-medium text-ink/70 hover:text-navy transition">Microsoft 365</a>
+        <a href="/blog/" class="hidden sm:inline text-sm font-medium text-ink/70 hover:text-navy transition">Blog</a>
+        <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="btn-gold text-sm px-4 py-2">Book a call</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative pt-36 pb-10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-3xl mx-auto px-6">
+    <div class="reveal"><span class="mono-label">Agentic AI Management &middot; Maryland</span></div>
+    <h1 class="reveal mt-6 font-display font-semibold tracking-tighter leading-[1.02] text-[34px] sm:text-[44px] text-navy">AI agents are employees now. <span class="font-serif italic font-normal text-blue">Somebody has to manage them.</span></h1>
+    <p class="reveal mt-6 text-[18px] leading-relaxed text-ink/70">Every agent your firm runs gets a named owner, only the access it needs, a person checking its work, and a line in an inventory. I build them, govern them, and keep them running inside the Microsoft 365 you already pay for. Columbia, Maryland.</p>
+  </div>
+</section>
+
+<!-- AUTHOR BYLINE -->
+<section class="relative">
+  <div class="max-w-3xl mx-auto px-6">
+    <p class="reveal text-[14px] text-ink/60">By <strong class="text-ink/85">Mark Lucas</strong>, founder of JamesTech LLC, Columbia, MD. Roughly thirty years on the Microsoft stack, three of them at Microsoft. Artemis program contractor at NASA.</p>
+  </div>
+</section>
+
+<!-- BODY -->
+<section class="relative pb-8 pt-6">
+  <div class="max-w-2xl mx-auto px-6 space-y-12">
+
+    <div class="reveal">
+      <span class="mono-label">The problem</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">Why an agent needs a manager.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p>An AI agent is different from the software you bought before. It reads your files, sends messages, updates records, and decides what to do next, within whatever permissions somebody gave it. In practice that somebody was often a staff member on a Tuesday afternoon, and nobody wrote it down.</p>
+        <p>Once an agent can reach your SharePoint, your inbox, your CRM, or your accounting system, it's part of the firm's operations. It needs the same things a new hire needs: a defined job, a manager, access limited to that job, and someone reviewing the work until it earns more trust.</p>
+        <p>Turning the platform on is the easy part. What the agent is allowed to touch, who answers for it, and what happens when it's wrong, that's the management. Most 5 to 200 person firms don't have anyone doing it.</p>
+        <p>Ask any AI a question about your business. Does it answer like a teammate, or like a stranger who met you five seconds ago? A managed agent answers like a teammate, because somebody gave it the right context and the right limits.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">The work</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">What I manage.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <ul class="mt-4 space-y-3 list-none">
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Agent inventory and ownership.</strong> A single list of every agent, automation, and AI connector in the firm, including the ones staff set up on their own. Each one has a named human owner and a stated job.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>AI readiness review.</strong> Which workflows are worth automating, whether the data behind them is clean enough, and which permissions and policies need to exist before the first agent runs. Judged on your data and your workflows, not on your hardware.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Identity and least privilege.</strong> Agents run under their own named identities in Microsoft Entra, never a shared login or a personal account. Each one gets only the sites, lists, and mailboxes its job needs.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Human review, by design.</strong> For each agent, a written answer to "which steps does a person check?" Money, personnel, and anything that goes out under the firm's name stop for a human. Reminders and status updates don't.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>The AI use policy.</strong> A two-page document staff will actually read: which tools are approved, what data never goes into a consumer chatbot, who owns what, and how to report a problem. Includes the tools people already installed on their own.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Microsoft 365 integration.</strong> Agents that read from SharePoint, post in Teams, run through Power Automate, and use Copilot Studio or Claude, all inside your own tenant under your own permissions.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Monitoring and run logs.</strong> Every action an agent takes leaves a trail you can read. Failed runs get noticed by me before they get noticed by a client.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>The builds themselves.</strong> I don't only govern agents, I build them. Approval workflows, document pipelines, meeting debriefs, morning briefs, reactivation outreach, in your voice and on your stack.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Staff training.</strong> A short session per quarter on using AI well at the firm: what's allowed, what to check, and who to ask. New agents get a one-page how-to for the people who work with them.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">The line</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">Where your IT provider ends and this begins.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p>Keep your IT provider. They hold the keys to the perimeter and the machines, and they should. I own what runs on top of that layer. The line is drawn by workload, and it keeps everyone in their lane.</p>
+        <div class="mt-6 glass rounded-2xl p-2 sm:p-4 overflow-x-auto">
+        <table class="cmp">
+          <tr><th>Layer</th><th>Your IT provider or MSP</th><th>JamesTech</th></tr>
+          <tr><td>Logins, MFA, passkeys, Conditional Access</td><td>Owns</td><td>Designs agents to fit the rules</td></tr>
+          <tr><td>Laptops, phones, network, backups, helpdesk</td><td>Owns</td><td>Stays out</td></tr>
+          <tr><td>Security monitoring and endpoint protection</td><td>Owns</td><td>Reports anything an agent surfaces</td></tr>
+          <tr><td>Which AI agents exist and what each one does</td><td>Informed</td><td>Owns the inventory</td></tr>
+          <tr><td>Agent identities and permissions</td><td>Approves</td><td>Requests, documents, and reviews</td></tr>
+          <tr><td>Workflows, SharePoint, Teams, Power Platform, Copilot Studio</td><td>Supports the tenant</td><td>Builds and runs the workloads</td></tr>
+          <tr><td>AI use policy and staff training</td><td>Reviews</td><td>Writes and delivers</td></tr>
+          <tr><td>Human review points and run logs</td><td>Can audit</td><td>Owns</td></tr>
+        </table>
+        </div>
+        <p>When something on my side needs a change on theirs, they get a one-line ticket with the exact setting. When they add a control that makes the firm safer, it goes in my next report with their name on it.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">Governance</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">Five rules every agent follows.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p>Agents touch email, client records, financial data, and the documents your firm runs on. Without limits they can leak what they read, act on stale information, or automate a step that should have stopped for a person. So every agent I build or take over follows the same five rules, written into its inventory entry.</p>
+        <ul class="mt-4 space-y-3 list-none">
+          <li class="flex gap-3"><span class="rule-num">01</span><span><strong>A named owner.</strong> A person in your firm, by name, who answers for what the agent does.</span></li>
+          <li class="flex gap-3"><span class="rule-num">02</span><span><strong>Its own identity.</strong> No shared credentials, no borrowed API keys, no running under somebody's personal login.</span></li>
+          <li class="flex gap-3"><span class="rule-num">03</span><span><strong>Least privilege.</strong> Access to the sites, lists, and mailboxes its job needs, and nothing else. Reviewed when the job changes.</span></li>
+          <li class="flex gap-3"><span class="rule-num">04</span><span><strong>A human review point.</strong> Written down per agent. Draft-only for anything outbound until it has earned more.</span></li>
+          <li class="flex gap-3"><span class="rule-num">05</span><span><strong>A trail.</strong> Every run logged. Every failure visible. Nothing silent.</span></li>
+        </ul>
+        <p>Regulated data gets the same treatment it gets in my other work. I've handled Controlled Unclassified Information for NASA and delivered for the Department of Justice and NATO, so "where can this data go?" is a question I ask before the build, not after.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">Judgment</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">What to automate fully, and what not to.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p>Some work should run on its own. A reminder that fires when a report is three days late. A summary of yesterday's meetings waiting in your inbox at 7 AM. A status list updated from a form nobody has to re-key.</p>
+        <p>Other work should stop and wait. Anything that moves money. Anything about a person's employment. Any message that goes out under the firm's name to a client, a donor, or a regulator. There the agent drafts, and a human sends.</p>
+        <p>Every firm draws those lines a little differently, based on its risk, its regulators, and its people. Drawing them, in writing, before the first agent runs is most of what management means. Adjusting them as the agents earn trust is the rest.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">Platforms</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">Copilot, Claude, ChatGPT, or custom.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p>I'm not selling a platform. Whether the firm is evaluating Microsoft Copilot and Copilot Studio, a Claude organization, ChatGPT for business, or custom agents on Power Automate, Dataverse, and n8n, the management work is the same: inventory, owner, identity, review point, trail.</p>
+        <p>Most agents I build live inside the firm's own Microsoft 365 tenant and read from SharePoint, because that's where the firm's knowledge already is and where its permissions already apply. That is also what an <a href="/ai-operating-system.html" class="underline text-blue hover:text-navy">AI operating system</a> is: the firm's context written down where the agents can read it, under the firm's own control.</p>
+        <p>If the tenant itself needs work first, idle seats, a shared admin login, files still on an office server, that's the <a href="/microsoft-365-solutions.html" class="underline text-blue hover:text-navy">Microsoft 365 side</a> of the practice, and it usually comes before the first agent.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">Fit</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">Who hires this.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p>Owners and practice leaders of 5 to 200 person firms who already have AI in the building, some of it sanctioned and some of it not, and nobody whose job it is to own it. Professional services, financial services, nonprofits and church organizations, and manufacturing operations are where I do most of this work.</p>
+        <p>The usual entry point is the <a href="/" class="underline text-blue hover:text-navy">AI Opportunity Review</a>, which produces the first roadmap and the first agent inventory. Ongoing management runs under a <a href="/fractional-ai-officer.html" class="underline text-blue hover:text-navy">Fractional AI Officer retainer</a>, scoped to the size of your team.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="relative py-16">
+  <div class="max-w-2xl mx-auto px-6">
+    <span class="mono-label reveal">Questions</span>
+    <h2 class="reveal mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">The honest answers.</h2>
+    <div class="reveal mt-6">
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">What is agentic AI management?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">The ongoing work of owning the AI agents a business runs: keeping an inventory of them, giving each one a named human owner and only the access it needs, deciding which steps a person reviews, writing the AI use policy, watching what the agents do, and building the next one. I provide it to 5 to 200 person firms in and around Columbia, Maryland, and remotely across the Baltimore-Washington corridor.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">How is this different from what our IT provider does?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">Your IT provider keeps the perimeter and the machines: logins, devices, network, backups, monitoring. I own what the agents do on top of that: the use cases, the workflows, the permissions each agent holds, the review points, the policy, and the training. The two fit together, and I make a point of staying in my lane.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">Which AI platforms do you manage?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">Microsoft Copilot and Copilot Studio, Claude, ChatGPT, and custom agents on Power Automate, Power Apps, Dataverse, and n8n. Most of what I build lives inside your own Microsoft 365 tenant and reads from SharePoint.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">Does every agent need a person approving its work?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">No. Reminders and status updates should run on their own. Money, personnel, and anything that goes out under the firm's name should stop for a person. Deciding which is which, in writing, is the first job.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">How do we start?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">A short call to scope it. Most firms start with the AI Opportunity Review, which produces the first roadmap and the first agent inventory. Ongoing management runs under a retainer sized to your team.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="relative py-20 mt-8 border-t border-navy/10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-2xl mx-auto px-6 text-center">
+    <h2 class="reveal font-display font-semibold tracking-tight text-[28px] md:text-[38px] text-navy leading-[1.05]">Find out what's already running <span class="font-serif italic font-normal text-blue">in your building</span>.</h2>
+    <p class="reveal mt-5 text-ink/70 text-[16px] leading-relaxed max-w-lg mx-auto">A short call to scope it. You'll leave knowing which agents you already have, which ones are worth building, and who should own each one. Scoped to your team.</p>
+    <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="reveal btn-gold inline-block mt-8 px-8 py-4 text-[15px]">Book a scoping call</a>
+    <p class="reveal mt-4"><a href="/" class="text-sm text-blue hover:text-navy transition font-medium">&larr; Back to JamesTech</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-navy/10 py-10">
+  <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink/50">
+    <div class="flex items-center gap-3">
+      <span class="jt-badge w-7 h-7 pt-[4px]"><span class="jt text-[13px]">JT</span><span class="jt-ai text-[6px] ml-[1px]">AI</span></span>
+      <span class="font-display font-semibold text-navy">JamesTech</span>
+    </div>
+    <p>Mark Lucas &middot; JamesTech LLC &middot; Columbia, MD</p>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('active'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = Math.min(i % 5, 4) * 60 + 'ms';
+    io.observe(el);
+  });
+</script>
+</body>
+</html>

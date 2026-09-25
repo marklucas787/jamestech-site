@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Microsoft 365 Solutions for Maryland Firms: Use What You Already Pay For | JamesTech</title>
+<meta name="description" content="SharePoint, Teams, Power Automate, Power Apps, and Copilot, set up around how your firm actually works. JamesTech LLC cleans up the tenant, builds the workloads, and trains the team, for 5 to 200 person firms in Columbia, Maryland." />
+<link rel="canonical" href="https://jamestech.com/microsoft-365-solutions.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Microsoft 365 Solutions for Maryland Firms: Use What You Already Pay For | JamesTech" />
+<meta property="og:description" content="SharePoint, Teams, Power Automate, Power Apps, and Copilot, set up around how your firm actually works. JamesTech LLC cleans up the tenant, builds the workloads, and trains the team, for 5 to 200 person firms in Columbia, Maryland." />
+<meta property="og:url" content="https://jamestech.com/microsoft-365-solutions.html" />
+<meta property="og:image" content="https://jamestech.com/assets/jt-ai-icon-512.png" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/jt-ai-icon.png" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['Manrope', 'sans-serif'],
+          serif: ['"Instrument Serif"', 'serif'],
+          mono: ['"Space Grotesk"', 'monospace'],
+        },
+        colors: {
+          navy: '#0E2C6E', blue: '#2A66D6', blue2: '#1A48A6', lblue: '#4D8DF0',
+          gold: '#FFC836', gold2: '#FFB200', ink: '#0E1726', slate: '#5B6B86', mist: '#F4F7FC',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root { --line: rgba(14,44,110,0.10); --line2: rgba(14,44,110,0.18); --blue:#2A66D6; --navy:#0E2C6E; --gold:#FFC836; --gold2:#FFB200; }
+  html { scroll-behavior: smooth; }
+  body { background:#FFFFFF; color:#0E1726; font-family:'Manrope',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  ::selection { background: var(--gold); color: var(--navy); }
+
+  .jt-badge { border-radius:30%; background:linear-gradient(135deg,#1A48A6,#0E2C6E); display:inline-flex; align-items:flex-start; justify-content:center; flex:none; }
+  .jt-badge .jt { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-.04em; color:#fff; line-height:1; }
+  .jt-badge .jt-ai { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-.02em; color:#FFC836; line-height:1; }
+
+  .mono-label { font-family:'Space Grotesk',monospace; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.24em; color:var(--blue); }
+  .glass { background:#FFFFFF; border:1px solid var(--line); box-shadow:0 1px 2px rgba(14,44,110,0.04), 0 18px 40px -28px rgba(14,44,110,0.30); }
+  .soft-card { background:#FFFFFF; border:1px solid var(--line); box-shadow:0 1px 2px rgba(14,44,110,0.03); }
+  .aura { position:absolute; inset:0; pointer-events:none; }
+  .aura::before { content:''; position:absolute; width:560px; height:560px; left:-160px; top:-200px; background:radial-gradient(circle, rgba(42,102,214,0.12), transparent 60%); filter:blur(44px); }
+  .aura::after { content:''; position:absolute; width:520px; height:520px; right:-150px; bottom:-180px; background:radial-gradient(circle, rgba(255,200,54,0.14), transparent 60%); filter:blur(50px); }
+
+  .btn-gold { background:linear-gradient(180deg,var(--gold),var(--gold2)); color:var(--navy); font-weight:700; border-radius:10px; transition:transform .25s, box-shadow .25s, filter .25s; box-shadow:0 10px 30px -8px rgba(255,178,0,0.55); }
+  .btn-gold:hover { transform:translateY(-2px); filter:brightness(1.03); box-shadow:0 16px 40px -8px rgba(255,178,0,0.7); }
+  .btn-ghost { border:1px solid var(--line2); color:var(--navy); border-radius:10px; transition:background .25s, border-color .25s; }
+  .btn-ghost:hover { background:rgba(42,102,214,0.06); border-color:var(--blue); }
+
+  .quote { border-left:3px solid var(--gold); padding:4px 0 4px 22px; }
+  .reveal { opacity:0; filter:blur(6px); transform:translateY(20px); transition:all .9s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.active { opacity:1; filter:blur(0); transform:translateY(0); }
+  details { border-bottom:1px solid var(--line); }
+  details summary { cursor:pointer; list-style:none; }
+  details summary::-webkit-details-marker { display:none; }
+  details[open] .plus { transform:rotate(45deg); }
+  .plus { transition:transform .25s; color:var(--blue); }
+  .prose p { margin-top:1rem; }
+  .step-num { font-family:'Space Grotesk',sans-serif; font-weight:700; color:var(--gold2); font-size:13px; letter-spacing:.08em; }
+</style>
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://jamestech.com/#org",
+      "name": "JamesTech LLC",
+      "url": "https://jamestech.com",
+      "email": "info@jamestech.com",
+      "telephone": "+1-240-363-2961",
+      "logo": "https://jamestech.com/assets/jt-ai-icon-512.png",
+      "address": { "@type": "PostalAddress", "addressLocality": "Columbia", "addressRegion": "MD", "addressCountry": "US" },
+      "areaServed": [ "Columbia MD", "Howard County MD", "Maryland", "Baltimore-Washington corridor" ],
+      "founder": { "@id": "https://jamestech.com/#mark-lucas" },
+      "description": "AI automation consulting and Microsoft Power Platform builds for 5 to 200 person firms. AI Opportunity Review, AI Operating System installs, Agentic AI Management, Microsoft 365 solutions, Fractional AI Officer retainers, and AI training in Columbia, Maryland."
+    },
+    {
+      "@type": "Person",
+      "@id": "https://jamestech.com/#mark-lucas",
+      "name": "Mark Lucas",
+      "jobTitle": "Founder and Lead Consultant",
+      "worksFor": { "@id": "https://jamestech.com/#org" },
+      "url": "https://jamestech.com",
+      "knowsAbout": [ "Microsoft 365", "SharePoint Online", "Microsoft Teams", "Power Automate", "Power Apps", "Dataverse", "Copilot Studio", "Microsoft 365 Copilot", "Microsoft 365 tenant governance" ],
+      "description": "Founder of JamesTech LLC in Columbia, Maryland. Roughly thirty years building on the Microsoft stack, including three years as a Microsoft employee. Artemis program contractor at NASA via The Aerospace Corporation."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://jamestech.com/microsoft-365-solutions.html#service",
+      "name": "Microsoft 365 Solutions",
+      "serviceType": "Microsoft 365 setup, workloads, tenant cleanup, and training",
+      "provider": { "@id": "https://jamestech.com/#org" },
+      "areaServed": "Maryland",
+      "audience": { "@type": "BusinessAudience", "name": "5 to 200 person firms" },
+      "url": "https://jamestech.com/microsoft-365-solutions.html",
+      "description": "SharePoint document management, Teams, Power Automate workflows, Power Apps, Copilot readiness, and tenant housekeeping, built around how the firm works and handed over with training."
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does a Microsoft 365 consultant do for a small firm?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sets up the parts of Microsoft 365 the firm already pays for around how the firm actually works: SharePoint for documents, Teams for communication, Power Automate for the recurring workflows, Power Apps for the forms and trackers, and Copilot where it earns its seat. JamesTech LLC also cleans up the tenant (idle seats, shared admin logins, permissions nobody can explain) and trains the team to run it." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle security, backups, and devices?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Your IT provider or managed service provider keeps logins, MFA, devices, network, backups, and security monitoring. JamesTech builds and runs the workloads on top of that layer and requests any tenant change through them, one setting at a time." }
+    },
+    {
+      "@type": "Question",
+      "name": "Our files are still on an office server. Can you move them?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. A messy file server moved to the cloud is still a messy file server, so the move starts with a structure: which sites, which libraries, who owns each one, and what permissions apply. Then the files move in, and OneDrive syncs them to every computer so staff keep working the way they did." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Copilot worth it for a 10 person firm?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sometimes, for some seats. Copilot works well when the firm's documents are organized and permissions are right, and poorly when they are not. JamesTech prices it at the real per-seat cost, recommends it for the people whose work it will change, and says so when it will not pay for itself." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do we start?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A short call, then a Microsoft 365 assessment scoped to the size of the firm: what you own, what you use, what is exposed, and what to build first. Most firms leave with a ranked list and take on the top two or three items." }
+    }
+  ]
+}
+</script>
+</head>
+<body class="font-body antialiased">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="mt-4 glass rounded-xl flex items-center justify-between px-5 py-3">
+      <a href="/" class="flex items-center gap-3">
+        <span class="jt-badge w-9 h-9 pt-[5px]"><span class="jt text-[17px]">JT</span><span class="jt-ai text-[8px] ml-[2px] mt-[1px]">AI</span></span>
+        <span class="flex flex-col leading-none">
+          <span class="font-display font-bold text-navy text-[15px] tracking-tight">JamesTech</span>
+          <span class="font-body text-[9px] tracking-[0.16em] uppercase text-slate mt-[3px]">Since 2001</span>
+        </span>
+      </a>
+      <div class="flex items-center gap-5">
+        <a href="/agentic-ai-management.html" class="hidden sm:inline text-sm font-medium text-ink/70 hover:text-navy transition">Agentic AI</a>
+        <a href="/blog/" class="hidden sm:inline text-sm font-medium text-ink/70 hover:text-navy transition">Blog</a>
+        <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="btn-gold text-sm px-4 py-2">Book a call</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative pt-36 pb-10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-3xl mx-auto px-6">
+    <div class="reveal"><span class="mono-label">Microsoft 365 Solutions &middot; Maryland</span></div>
+    <h1 class="reveal mt-6 font-display font-semibold tracking-tighter leading-[1.02] text-[34px] sm:text-[44px] text-navy">You already pay for Microsoft 365. <span class="font-serif italic font-normal text-blue">Most firms use about a quarter of it.</span></h1>
+    <p class="reveal mt-6 text-[18px] leading-relaxed text-ink/70">SharePoint, Teams, Power Automate, Power Apps, Copilot. I set them up around how your firm actually works, clean up the tenant, and train your people to run it. Columbia, Maryland.</p>
+  </div>
+</section>
+
+<!-- AUTHOR BYLINE -->
+<section class="relative">
+  <div class="max-w-3xl mx-auto px-6">
+    <p class="reveal text-[14px] text-ink/60">By <strong class="text-ink/85">Mark Lucas</strong>, founder of JamesTech LLC, Columbia, MD. Roughly thirty years on the Microsoft stack, three of them at Microsoft. Artemis program contractor at NASA.</p>
+  </div>
+</section>
+
+<!-- BODY -->
+<section class="relative pb-8 pt-6">
+  <div class="max-w-2xl mx-auto px-6 space-y-12">
+
+    <div class="reveal">
+      <span class="mono-label">The problem</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">Your firm runs on Microsoft 365. It probably wasn't set up for it.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p>Email moved to Exchange years ago and everything else stayed where it was. The files are on an office server nobody can reach from home, or spread across personal OneDrives. Teams got turned on and never adopted. Copilot got bought for everyone and opened by two people.</p>
+        <p>Here's what I find in most 5 to 200 person tenants on the first look:</p>
+        <ul class="mt-4 space-y-3 list-none">
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span>Seats still paid for people who left last year, and one shared admin login everybody knows.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span>Permissions granted to individuals one file at a time, so nobody can say who can see what.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span>The same procedure in three documents in three places, all slightly different.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span>Recurring work done by hand, re-keying a form into a spreadsheet into an email, that Power Automate could have been doing since 2019.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span>Licenses for tools nobody has opened. Business Premium, E3, Copilot, Visio, Project. Paid monthly, used never.</span></li>
+        </ul>
+        <p>None of that is a security product problem. It's a setup problem, and setup is the part I do.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">The path</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">Assess, build, hand over.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <ul class="mt-4 space-y-4 list-none">
+          <li class="flex gap-3"><span class="step-num">01</span><span><strong>Assess.</strong> I read the tenant and sit with the people who use it. You get a plain-English list of what you own, what you use, what's exposed, and what to build first, ranked by the hours it gives back.</span></li>
+          <li class="flex gap-3"><span class="step-num">02</span><span><strong>Build.</strong> The SharePoint structure, the workflows, the forms, the trackers, the Copilot setup, in your tenant under your permissions. Fixed-scope modules with their own price, so the engagement grows by adding modules, never by surprise hours.</span></li>
+          <li class="flex gap-3"><span class="step-num">03</span><span><strong>Hand over.</strong> Your team learns to run it. Short sessions on the real work, a one-page how-to per workflow, and a named person inside the firm who owns each piece. The firm keeps the capability instead of renting it.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">The work</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">What I do inside Microsoft 365.</h2>
+      <div class="mt-6 grid sm:grid-cols-2 gap-4">
+        <div class="soft-card rounded-2xl p-5">
+          <h3 class="font-display font-semibold text-[17px] text-navy">SharePoint and document management</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-ink/70">Sites and libraries that match how the firm is organized. Metadata instead of nine levels of folders. Permissions by group, not by person. The office server retired, with OneDrive syncing the new structure to every computer.</p>
+        </div>
+        <div class="soft-card rounded-2xl p-5">
+          <h3 class="font-display font-semibold text-[17px] text-navy">Teams, set up to be used</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-ink/70">A few teams and channels that map to real work, not one per whim. Meeting recordings and transcripts landing where people can find them. Guest access decided on purpose.</p>
+        </div>
+        <div class="soft-card rounded-2xl p-5">
+          <h3 class="font-display font-semibold text-[17px] text-navy">Power Automate workflows</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-ink/70">Approvals, reminders, document routing, status updates, and the hand-offs between systems (payroll, accounting, CRM, forms). One client's 40-hour manual task now runs in minutes.</p>
+        </div>
+        <div class="soft-card rounded-2xl p-5">
+          <h3 class="font-display font-semibold text-[17px] text-navy">Power Apps and Dataverse</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-ink/70">The tracker that's currently a spreadsheet with six tabs, rebuilt as an app with a proper table behind it, row-level history, and a dashboard for whoever asks for the numbers.</p>
+        </div>
+        <div class="soft-card rounded-2xl p-5">
+          <h3 class="font-display font-semibold text-[17px] text-navy">Copilot and Copilot Studio</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-ink/70">Copilot for the seats where it changes the work, priced at the real per-seat cost, after the documents are organized enough for it to be useful. Copilot Studio agents that answer from your own SharePoint content under your own permissions.</p>
+        </div>
+        <div class="soft-card rounded-2xl p-5">
+          <h3 class="font-display font-semibold text-[17px] text-navy">Tenant housekeeping</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-ink/70">Licensing review, idle seats removed, admin roles named, groups instead of one-off grants, guest accounts audited, retention set. Every change requested through your IT provider, one setting at a time, and documented.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">The line</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">Where your IT provider fits.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p>Keep them. Logins, MFA, passkeys, devices, network, backups, and security monitoring are theirs, and they should stay theirs. I build and run what your staff use on top of that layer, and when I need a tenant setting changed, they get a one-line ticket with the exact record.</p>
+        <p>The same division holds for AI. Once the documents are organized and the permissions make sense, the agents that read them need an owner too. That's the <a href="/agentic-ai-management.html" class="underline text-blue hover:text-navy">agentic AI management</a> side of the practice, and this page is usually what comes first.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">The cost of waiting</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">What happens if nothing changes.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <p>The tenant keeps getting messier, because every new hire adds a folder and every departure leaves a seat. The person who knows where everything is keeps being the only person who knows. The manual work keeps costing the same hours every week, and the Copilot seats keep billing whether anyone opens them or not.</p>
+        <p>Then somebody asks the AI a question about the business and it answers like a stranger who met you five seconds ago, because the knowledge it needed was in a drawer, an inbox, and one employee's head. That's the moment most firms call.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="mono-label">Done right</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">What it looks like when it's working.</h2>
+      <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
+        <ul class="mt-4 space-y-3 list-none">
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span>Every document has one home, and a new hire can find it without asking.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span>Staff work from anywhere, on the same files, without a VPN and without emailing attachments to themselves.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span>The recurring work runs on its own and tells a person when it needs one.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span>The license bill went down, and what's left is being used.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span>An auditor, a board member, or a new AI agent can be shown exactly who can see what, and why.</span></li>
+        </ul>
+        <p>I've built this for 5 person nonprofits and for teams inside a global financial-services firm, and the shape is the same at both sizes. Read <a href="/case-study.html" class="underline text-blue hover:text-navy">the case study</a> for the larger one.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="relative py-16">
+  <div class="max-w-2xl mx-auto px-6">
+    <span class="mono-label reveal">Questions</span>
+    <h2 class="reveal mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">The honest answers.</h2>
+    <div class="reveal mt-6">
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">What does a Microsoft 365 consultant do for a small firm?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">Sets up the parts of Microsoft 365 you already pay for around how the firm actually works: SharePoint for documents, Teams for communication, Power Automate for the recurring workflows, Power Apps for the forms and trackers, and Copilot where it earns its seat. I also clean up the tenant and train the team to run it.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">Do you handle security, backups, and devices?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">No. Your IT provider keeps logins, MFA, devices, network, backups, and security monitoring. I build and run the workloads on top of that layer and request any tenant change through them, one setting at a time.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">Our files are still on an office server. Can you move them?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">Yes. A messy file server moved to the cloud is still a messy file server, so the move starts with a structure: which sites, which libraries, who owns each one, what permissions apply. Then the files move in, and OneDrive syncs them to every computer so staff keep working the way they did.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">Is Copilot worth it for a 10 person firm?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">Sometimes, for some seats. Copilot works well when the documents are organized and the permissions are right, and poorly when they aren't. I price it at the real per-seat cost, recommend it for the people whose work it will change, and say so when it won't pay for itself.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink pr-6">How do we start?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">A short call, then an assessment scoped to the size of the firm: what you own, what you use, what's exposed, and what to build first. Most firms leave with a ranked list and take on the top two or three items.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="relative py-20 mt-8 border-t border-navy/10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-2xl mx-auto px-6 text-center">
+    <h2 class="reveal font-display font-semibold tracking-tight text-[28px] md:text-[38px] text-navy leading-[1.05]">Find out what you're paying for <span class="font-serif italic font-normal text-blue">and not using</span>.</h2>
+    <p class="reveal mt-5 text-ink/70 text-[16px] leading-relaxed max-w-lg mx-auto">A short call to scope a Microsoft 365 assessment. You'll leave with a ranked list of what to fix and build first. Scoped to your team.</p>
+    <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="reveal btn-gold inline-block mt-8 px-8 py-4 text-[15px]">Book a scoping call</a>
+    <p class="reveal mt-4"><a href="/" class="text-sm text-blue hover:text-navy transition font-medium">&larr; Back to JamesTech</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-navy/10 py-10">
+  <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink/50">
+    <div class="flex items-center gap-3">
+      <span class="jt-badge w-7 h-7 pt-[4px]"><span class="jt text-[13px]">JT</span><span class="jt-ai text-[6px] ml-[1px]">AI</span></span>
+      <span class="font-display font-semibold text-navy">JamesTech</span>
+    </div>
+    <p>Mark Lucas &middot; JamesTech LLC &middot; Columbia, MD</p>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('active'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = Math.min(i % 5, 4) * 60 + 'ms';
+    io.observe(el);
+  });
+</script>
+</body>
+</html>
