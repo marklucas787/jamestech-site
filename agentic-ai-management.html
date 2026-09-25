@@ -127,8 +127,8 @@
     },
     {
       "@type": "Question",
-      "name": "How is this different from what our IT provider or MSP does?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Your IT provider keeps the perimeter and the machines: logins, devices, network, backups, monitoring. JamesTech owns what the AI agents do on top of that layer: the use cases, the workflows, the permissions each agent holds, the human review points, the policy, and the training. The two fit together, and the line is drawn by workload, not by vendor." }
+      "name": "Do we still need a separate IT provider?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not for this. Identity, devices, email protection, backup, and monitoring are part of the practice, handled by JamesTech with its Microsoft 365 security partner, so the AI agents and the stack they run on come from one team. Firms that already have an IT provider they like keep them, and JamesTech works alongside them." }
     },
     {
       "@type": "Question",
@@ -209,8 +209,9 @@
       <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
         <ul class="mt-4 space-y-3 list-none">
           <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Agent inventory and ownership.</strong> A single list of every agent, automation, and AI connector in the firm, including the ones staff set up on their own. Each one has a named human owner and a stated job.</span></li>
-          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>AI readiness review.</strong> Which workflows are worth automating, whether the data behind them is clean enough, and which permissions and policies need to exist before the first agent runs. Judged on your data and your workflows, not on your hardware.</span></li>
-          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Identity and least privilege.</strong> Agents run under their own named identities in Microsoft Entra, never a shared login or a personal account. Each one gets only the sites, lists, and mailboxes its job needs.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>AI readiness review.</strong> Which workflows are worth automating, whether the data behind them is clean enough, whether the tenant and the devices are ready, and which permissions and policies need to exist before the first agent runs.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Identity and least privilege.</strong> Agents run under their own named identities in Microsoft Entra, never a shared login or a personal account. Each one gets only the sites, lists, and mailboxes its job needs. MFA, passkeys, and Conditional Access on the humans, too.</span></li>
+          <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Devices and security monitoring.</strong> Every machine an agent or its owner works from is enrolled, protected, and watched: Intune, Defender, sign-in risk, and alerts that a person reads. Done with my Microsoft 365 security partner.</span></li>
           <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Human review, by design.</strong> For each agent, a written answer to "which steps does a person check?" Money, personnel, and anything that goes out under the firm's name stop for a human. Reminders and status updates don't.</span></li>
           <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>The AI use policy.</strong> A two-page document staff will actually read: which tools are approved, what data never goes into a consumer chatbot, who owns what, and how to report a problem. Includes the tools people already installed on their own.</span></li>
           <li class="flex gap-3"><span class="text-blue font-bold">&rarr;</span><span><strong>Microsoft 365 integration.</strong> Agents that read from SharePoint, post in Teams, run through Power Automate, and use Copilot Studio or Claude, all inside your own tenant under your own permissions.</span></li>
@@ -222,24 +223,24 @@
     </div>
 
     <div class="reveal">
-      <span class="mono-label">The line</span>
-      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">Where your IT provider ends and this begins.</h2>
+      <span class="mono-label">The foundation</span>
+      <h2 class="mt-4 font-display font-semibold text-[26px] md:text-[30px] text-navy leading-tight">Agents run on a stack. I run the stack.</h2>
       <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
-        <p>Keep your IT provider. They hold the keys to the perimeter and the machines, and they should. I own what runs on top of that layer. The line is drawn by workload, and it keeps everyone in their lane.</p>
+        <p>An agent is only as safe as the identity it runs under, the device it runs on, and the tenant it reads from. So the practice covers the whole stack, from the logins to the workloads to the agents on top, with my Microsoft 365 security partner alongside for the deep security work. One team, one inventory, one report.</p>
         <div class="mt-6 glass rounded-2xl p-2 sm:p-4 overflow-x-auto">
         <table class="cmp">
-          <tr><th>Layer</th><th>Your IT provider or MSP</th><th>JamesTech</th></tr>
-          <tr><td>Logins, MFA, passkeys, Conditional Access</td><td>Owns</td><td>Designs agents to fit the rules</td></tr>
-          <tr><td>Laptops, phones, network, backups, helpdesk</td><td>Owns</td><td>Stays out</td></tr>
-          <tr><td>Security monitoring and endpoint protection</td><td>Owns</td><td>Reports anything an agent surfaces</td></tr>
-          <tr><td>Which AI agents exist and what each one does</td><td>Informed</td><td>Owns the inventory</td></tr>
-          <tr><td>Agent identities and permissions</td><td>Approves</td><td>Requests, documents, and reviews</td></tr>
-          <tr><td>Workflows, SharePoint, Teams, Power Platform, Copilot Studio</td><td>Supports the tenant</td><td>Builds and runs the workloads</td></tr>
-          <tr><td>AI use policy and staff training</td><td>Reviews</td><td>Writes and delivers</td></tr>
-          <tr><td>Human review points and run logs</td><td>Can audit</td><td>Owns</td></tr>
+          <tr><th>Layer</th><th>What gets done</th></tr>
+          <tr><td>Identity and access</td><td>Microsoft Entra, MFA, passkeys, Conditional Access, role-based access, admin roles named and reviewed</td></tr>
+          <tr><td>Devices and endpoints</td><td>Laptops, desktops, and phones enrolled in Intune, Defender for Endpoint on every one, compliance policies, the unmanaged Macs and home laptops brought in</td></tr>
+          <tr><td>Email and collaboration security</td><td>Defender for Office 365 policies, phishing and malware protection tuned, external sharing decided on purpose</td></tr>
+          <tr><td>Microsoft 365 tenant</td><td>Licensing, idle seats, groups, guest access, retention, and the SharePoint and Teams structure the agents will read from</td></tr>
+          <tr><td>Backup and recovery</td><td>Microsoft 365 backup in place and tested, because "we use Microsoft" is not a backup strategy</td></tr>
+          <tr><td>Monitoring</td><td>Security alerts, sign-in risk, and agent run logs watched by a person, with a monthly report you can read</td></tr>
+          <tr><td>Network and hardware</td><td>Reviewed for what AI work actually needs. Most firms need fewer upgrades than they've been told</td></tr>
+          <tr><td>The agents</td><td>Inventory, owners, identities, permissions, review points, policy, training, and the builds themselves</td></tr>
         </table>
         </div>
-        <p>When something on my side needs a change on theirs, they get a one-line ticket with the exact setting. When they add a control that makes the firm safer, it goes in my next report with their name on it.</p>
+        <p>If you already have an IT provider you like, I work with them and the reports still come from one place. Either way, nobody outside the firm has to sign off on what your own agents are allowed to do.</p>
       </div>
     </div>
 
@@ -275,7 +276,7 @@
       <div class="prose mt-2 text-ink/75 text-[16px] leading-relaxed">
         <p>I'm not selling a platform. Whether the firm is evaluating Microsoft Copilot and Copilot Studio, a Claude organization, ChatGPT for business, or custom agents on Power Automate, Dataverse, and n8n, the management work is the same: inventory, owner, identity, review point, trail.</p>
         <p>Most agents I build live inside the firm's own Microsoft 365 tenant and read from SharePoint, because that's where the firm's knowledge already is and where its permissions already apply. That is also what an <a href="/ai-operating-system.html" class="underline text-blue hover:text-navy">AI operating system</a> is: the firm's context written down where the agents can read it, under the firm's own control.</p>
-        <p>If the tenant itself needs work first, idle seats, a shared admin login, files still on an office server, that's the <a href="/microsoft-365-solutions.html" class="underline text-blue hover:text-navy">Microsoft 365 side</a> of the practice, and it usually comes before the first agent.</p>
+        <p>If the tenant itself needs work first, idle seats, a shared admin login, files still on an office server, MFA not enforced everywhere, that's the <a href="/microsoft-365-solutions.html" class="underline text-blue hover:text-navy">Microsoft 365 side</a> of the practice, and it usually comes before the first agent.</p>
       </div>
     </div>
 
@@ -306,10 +307,10 @@
       </details>
       <details>
         <summary class="flex items-center justify-between py-5">
-          <span class="font-semibold text-[17px] text-ink pr-6">How is this different from what our IT provider does?</span>
+          <span class="font-semibold text-[17px] text-ink pr-6">Do we still need a separate IT provider?</span>
           <span class="plus text-2xl leading-none">+</span>
         </summary>
-        <p class="pb-6 text-ink/65 leading-relaxed">Your IT provider keeps the perimeter and the machines: logins, devices, network, backups, monitoring. I own what the agents do on top of that: the use cases, the workflows, the permissions each agent holds, the review points, the policy, and the training. The two fit together, and I make a point of staying in my lane.</p>
+        <p class="pb-6 text-ink/65 leading-relaxed">Not for this. Identity, devices, email protection, backup, and monitoring are part of the practice, handled with my Microsoft 365 security partner, so the agents and the stack they run on come from one team. If you already have an IT provider you like, I work alongside them. What your agents are allowed to do stays your decision and mine.</p>
       </details>
       <details>
         <summary class="flex items-center justify-between py-5">
