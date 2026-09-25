@@ -47,3 +47,9 @@
   for = "/ai-training.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# Post renamed 2026-09-25 (turnover angle -> findable-information angle)
+[[redirects]]
+  from = "/blog/what-walks-out-the-door-when-your-best-employee-leaves.html"
+  to = "/blog/your-team-spends-a-day-a-week-looking-for-things.html"
+  status = 301

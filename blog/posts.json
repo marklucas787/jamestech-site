@@ -2,10 +2,10 @@
  "_comment": "Blog manifest, maintained by the AIOS blog relay (scripts/blog_relay.py). Newest first. The relay renders index cards, sitemap entries, and llms.txt lines from this file.",
  "posts": [
   {
-   "slug": "what-walks-out-the-door-when-your-best-employee-leaves",
-   "title": "What Walks Out the Door When Your Best Employee Leaves?",
-   "description": "When the person who knows how everything works leaves, the firm loses what it never wrote down. How to capture institutional knowledge in Microsoft 365 and SharePoint so AI can answer from it.",
-   "tag": "Knowledge Management",
+   "slug": "your-team-spends-a-day-a-week-looking-for-things",
+   "title": "Your Team Spends a Day a Week Looking for Things. Here's How to Get It Back.",
+   "description": "Staff lose close to a day a week hunting for files across desktops, drives, email, and shared folders. How to organize a firm's information in Microsoft 365 so it's findable, and why that's what makes AI useful.",
+   "tag": "Microsoft 365",
    "date": "2026-09-25",
    "date_human": "September 25, 2026"
   },

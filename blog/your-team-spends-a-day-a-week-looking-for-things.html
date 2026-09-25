@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your Team Spends a Day a Week Looking for Things. Here's How to Get It Back. | JamesTech</title>
+<meta name="description" content="Staff lose close to a day a week hunting for files across desktops, drives, email, and shared folders. How to organize a firm&#x27;s information in Microsoft 365 so it&#x27;s findable, and why that&#x27;s what makes AI useful." />
+<link rel="canonical" href="https://jamestech.com/blog/your-team-spends-a-day-a-week-looking-for-things.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Your Team Spends a Day a Week Looking for Things. Here's How to Get It Back." />
+<meta property="og:description" content="Staff lose close to a day a week hunting for files across desktops, drives, email, and shared folders. How to organize a firm&#x27;s information in Microsoft 365 so it&#x27;s findable, and why that&#x27;s what makes AI useful." />
+<meta property="og:url" content="https://jamestech.com/blog/your-team-spends-a-day-a-week-looking-for-things.html" />
+<meta property="og:image" content="https://jamestech.com/assets/jt-ai-icon-512.png" />
+<meta property="article:published_time" content="2026-09-25" />
+<meta property="article:author" content="Mark Lucas" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/jt-ai-icon.png" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['Manrope', 'sans-serif'],
+          serif: ['"Instrument Serif"', 'serif'],
+          mono: ['"Space Grotesk"', 'monospace'],
+        },
+        colors: {
+          navy: '#0E2C6E', blue: '#2A66D6', blue2: '#1A48A6', lblue: '#4D8DF0',
+          gold: '#FFC836', gold2: '#FFB200', ink: '#0E1726', slate: '#5B6B86', mist: '#F4F7FC',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root { --line: rgba(14,44,110,0.10); --line2: rgba(14,44,110,0.18); --blue:#2A66D6; --navy:#0E2C6E; --gold:#FFC836; --gold2:#FFB200; }
+  html { scroll-behavior: smooth; }
+  body { background:#FFFFFF; color:#0E1726; font-family:'Manrope',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  ::selection { background: var(--gold); color: var(--navy); }
+  .jt-badge { border-radius:30%; background:linear-gradient(135deg,#1A48A6,#0E2C6E); display:inline-flex; align-items:flex-start; justify-content:center; flex:none; }
+  .jt-badge .jt { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-.04em; color:#fff; line-height:1; }
+  .jt-badge .jt-ai { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-.02em; color:#FFC836; line-height:1; }
+  .mono-label { font-family:'Space Grotesk',monospace; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.24em; color:var(--blue); }
+  .glass { background:#FFFFFF; border:1px solid var(--line); box-shadow:0 1px 2px rgba(14,44,110,0.04), 0 18px 40px -28px rgba(14,44,110,0.30); }
+  .soft-card { background:#FFFFFF; border:1px solid var(--line); box-shadow:0 1px 2px rgba(14,44,110,0.03); }
+  .aura { position:absolute; inset:0; pointer-events:none; }
+  .aura::before { content:''; position:absolute; width:560px; height:560px; left:-160px; top:-200px; background:radial-gradient(circle, rgba(42,102,214,0.12), transparent 60%); filter:blur(44px); }
+  .aura::after { content:''; position:absolute; width:520px; height:520px; right:-150px; bottom:-180px; background:radial-gradient(circle, rgba(255,200,54,0.14), transparent 60%); filter:blur(50px); }
+  .btn-gold { background:linear-gradient(180deg,var(--gold),var(--gold2)); color:var(--navy); font-weight:700; border-radius:10px; transition:transform .25s, box-shadow .25s, filter .25s; box-shadow:0 10px 30px -8px rgba(255,178,0,0.55); }
+  .btn-gold:hover { transform:translateY(-2px); filter:brightness(1.03); box-shadow:0 16px 40px -8px rgba(255,178,0,0.7); }
+  .quote { border-left:3px solid var(--gold); padding:4px 0 4px 22px; }
+  .reveal { opacity:0; filter:blur(6px); transform:translateY(20px); transition:all .9s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.active { opacity:1; filter:blur(0); transform:translateY(0); }
+
+  /* Post prose — the relay emits plain semantic HTML; these rules style it to match the site. */
+  .post-body { color:rgba(14,23,38,0.78); font-size:16px; line-height:1.75; }
+  .post-body > * + * { margin-top:1.15em; }
+  .post-body h2 { font-family:'Space Grotesk',sans-serif; font-weight:600; color:var(--navy); font-size:26px; line-height:1.2; margin-top:2em; letter-spacing:-.01em; }
+  .post-body h3 { font-family:'Space Grotesk',sans-serif; font-weight:600; color:var(--navy); font-size:20px; line-height:1.25; margin-top:1.7em; }
+  .post-body a { color:var(--blue); text-decoration:underline; text-underline-offset:2px; }
+  .post-body a:hover { color:var(--navy); }
+  .post-body strong { color:rgba(14,23,38,0.92); }
+  .post-body ul, .post-body ol { padding-left:1.4em; }
+  .post-body ul { list-style:disc; }
+  .post-body ol { list-style:decimal; }
+  .post-body li + li { margin-top:.5em; }
+  .post-body blockquote { border-left:3px solid var(--gold); padding:4px 0 4px 22px; font-style:italic; color:rgba(14,23,38,0.8); font-size:17px; }
+  .post-body code { font-family:'Space Grotesk',monospace; font-size:14px; background:var(--mist, #F4F7FC); background:#F4F7FC; border:1px solid var(--line); border-radius:6px; padding:2px 6px; }
+  .post-body pre { background:#F4F7FC; border:1px solid var(--line); border-radius:12px; padding:16px 18px; overflow-x:auto; }
+  .post-body pre code { background:none; border:none; padding:0; }
+  .post-body hr { border:none; border-top:1px solid var(--line); margin-top:2em; }
+  .post-body img { max-width:100%; border-radius:12px; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Your Team Spends a Day a Week Looking for Things. Here's How to Get It Back.",
+  "description": "Staff lose close to a day a week hunting for files across desktops, drives, email, and shared folders. How to organize a firm&#x27;s information in Microsoft 365 so it&#x27;s findable, and why that&#x27;s what makes AI useful.",
+  "datePublished": "2026-09-25",
+  "url": "https://jamestech.com/blog/your-team-spends-a-day-a-week-looking-for-things.html",
+  "image": "https://jamestech.com/assets/jt-ai-icon-512.png",
+  "isPartOf": { "@id": "https://jamestech.com/blog/#blog" },
+  "author": { "@id": "https://jamestech.com/#mark-lucas" },
+  "publisher": { "@id": "https://jamestech.com/#org" }
+}
+</script>
+</head>
+<body class="font-body antialiased">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="mt-4 glass rounded-xl flex items-center justify-between px-5 py-3">
+      <a href="/" class="flex items-center gap-3">
+        <span class="jt-badge w-9 h-9 pt-[5px]"><span class="jt text-[17px]">JT</span><span class="jt-ai text-[8px] ml-[2px] mt-[1px]">AI</span></span>
+        <span class="flex flex-col leading-none">
+          <span class="font-display font-bold text-navy text-[15px] tracking-tight">JamesTech</span>
+          <span class="font-body text-[9px] tracking-[0.16em] uppercase text-slate mt-[3px]">Since 2001</span>
+        </span>
+      </a>
+      <div class="flex items-center gap-5">
+        <a href="/blog/" class="hidden sm:inline text-sm font-medium text-ink/70 hover:text-navy transition">Blog</a>
+        <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="btn-gold text-sm px-4 py-2">Book the Review</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative pt-36 pb-10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-3xl mx-auto px-6">
+    <div class="reveal"><span class="mono-label">Microsoft 365 &middot; September 25, 2026 &middot; 5 min read</span></div>
+    <h1 class="reveal mt-6 font-display font-semibold tracking-tighter leading-[1.05] text-[32px] sm:text-[42px] text-navy">Your Team Spends a Day a Week Looking for Things. Here's How to Get It Back.</h1>
+    <p class="reveal mt-5 text-[14px] text-ink/60">By <strong class="text-ink/85">Mark Lucas</strong>, founder of JamesTech LLC, Columbia, MD. Roughly thirty years on the Microsoft stack, three of them at Microsoft.</p>
+  </div>
+</section>
+
+<!-- BODY -->
+<article class="relative pb-8">
+  <div class="max-w-2xl mx-auto px-6">
+    <div class="post-body">
+<p>"Does anyone have the latest version of the onboarding checklist?"</p>
+
+<p>Two Teams messages. One reply with a file from 2024. A third person who thinks it's on the shared drive, under HR, or maybe Admin. Somebody finally emails it from their own desktop, and now there are two latest versions.</p>
+
+<p>Five minutes, three people, one document. Now multiply that by every document your firm touches in a day.</p>
+
+<h2>The day a week nobody budgets for</h2>
+
+<p>McKinsey's estimate is that knowledge workers spend about 19 percent of their week searching for and gathering information. Call it a day out of five. In a 12 person firm that's roughly two full-time salaries spent looking for things the firm already has.</p>
+
+<p>Nobody sees it as a cost, because it never shows up as a line item. It shows up as the afternoon that disappeared, the report that went out with last quarter's numbers, and the one person everyone interrupts because she knows where everything is.</p>
+
+<p>I've watched this in firms of five people and in teams inside a global financial-services company, and the pattern is the same. The firm has the information. It has it six times, in six places, and nobody's sure which copy is right.</p>
+
+<h2>Where it all lives right now</h2>
+
+<p>Take a look at where a typical firm's working information sits on a Tuesday afternoon:</p>
+
+<ul>
+<li>Desktops and Downloads folders, one per person</li>
+<li>Personal OneDrives that nobody else can see</li>
+<li>Email attachments, forwarded and re-forwarded, each one a fork</li>
+<li>The shared drive or office server, with a folder structure from whoever set it up in 2016</li>
+<li>Teams and chat threads, where the decision was made and never written anywhere else</li>
+<li>A spreadsheet with six tabs that's really a database</li>
+</ul>
+
+<p>Every one of those was a reasonable choice at the time. Together they mean the answer to "where is it?" depends entirely on who you ask.</p>
+
+<h2>What findable actually means</h2>
+
+<p>Findable is a short list, and none of it is technical:</p>
+
+<ul>
+<li><strong>One home per document.</strong> The onboarding checklist lives in one place. Everyone links to it. Nobody emails it.</li>
+<li><strong>Names that mean something.</strong> "2026 Client Intake Form," not "intake_v3_FINAL_Mark edits.docx."</li>
+<li><strong>A few tags instead of nine folder levels.</strong> Document type, client, year. Filter, don't dig.</li>
+<li><strong>The current version is obvious.</strong> Version history behind the scenes, one current file in front.</li>
+<li><strong>Permissions by group, not by person.</strong> The program staff group can see program files. Add a new hire to the group and they can see everything they need on day one.</li>
+<li><strong>Search that works.</strong> Which it does, once the first five are true.</li>
+</ul>
+
+<p>Most firms already pay for the tool that does all of this. They use it as a place to dump files.</p>
+
+<h2>Setting it up in Microsoft 365</h2>
+
+<p>This is most of what I do on the <a href="/microsoft-365-solutions.html">Microsoft 365 side</a> of my practice, and it's less dramatic than people expect. No migration project with a code name. A structure, then the files move into it.</p>
+
+<p>SharePoint sites match how the firm is organized: one per team or function, plus one everyone reads. Inside each site, document libraries with two or three metadata columns instead of a folder tree. OneDrive syncs the libraries to every computer, so staff still see a folder on their desktop and keep working the way they did. Teams channels point at those same libraries, so the file discussed in chat is the file in the library, not a copy.</p>
+
+<p>Retention policies quietly retire the 2016 drafts. Permissions get set by group once, and the shared admin login that everyone knew gets retired too.</p>
+
+<p>Then the office server gets turned off. That's usually the day people notice the difference, because working from home stops requiring a VPN and a prayer.</p>
+
+<h2>What the workday looks like after</h2>
+
+<p>A new hire finds the onboarding checklist without asking anyone, because it's in the New Staff library where the site told her to look.</p>
+
+<p>The person who used to be the human index gets her afternoons back. She's still the expert. She's no longer the search engine.</p>
+
+<p>The "which version?" argument stops, because there's one file with a history instead of eleven files with names.</p>
+
+<p>The Friday report pulls from the list that's updated all week instead of from an email chain, and it's right.</p>
+
+<p>None of that is a productivity hack. It's the firm getting back the day a week it was already paying for.</p>
+
+<h2>Findable is what makes AI useful</h2>
+
+<p>Here's the part that changed the math in the last two years.</p>
+
+<p>Microsoft Search already looks across SharePoint, OneDrive, and Exchange while respecting each person's permissions. Copilot can answer from your documents. A Copilot Studio agent can be pointed at a single library and answer questions from it. A Claude project can do the same with a folder of plain files. So instead of searching at all, a staff member types:</p>
+
+<blockquote>What's our process for a client who wants to change their billing date?</blockquote>
+
+<p>And gets the answer, with a link to the source document.</p>
+
+<p>Ask any AI a question about your business. Does it answer like a teammate, or like a stranger who met you five seconds ago? The difference is entirely whether the firm's knowledge is organized somewhere the AI can read it. A stranger is what you get from six copies in six places. A teammate is what you get from one home per document.</p>
+
+<p>AI doesn't fix messy information. If the same procedure exists in three documents with three different steps, the AI has three answers to choose from, and it will pick one with confidence. Organizing first is what makes the AI worth turning on. That's what I mean by an <a href="/ai-operating-system.html">AI operating system</a>: the firm's knowledge written down where the AI can read it, under the firm's own control. And once agents are reading it, they need an owner too, which is the <a href="/agentic-ai-management.html">agentic AI management</a> side of the work.</p>
+
+<h2>Where to start on Monday</h2>
+
+<p>Don't start with the whole firm. Start with one team.</p>
+
+<p>List the 20 documents they touch most. For each one, decide one home, one owner, and one name. Move those 20 into a library with two metadata columns. Point the team's channel at it. That takes about a week, most of it deciding, not moving.</p>
+
+<p>Then do the next team.</p>
+
+<p>Within a quarter the firm's working information has one address, the search bar returns the right thing, and the AI you're already paying for finally has something to read. The day a week comes back one team at a time.</p>
+
+    </div>
+  </div>
+</article>
+
+<!-- CTA -->
+<section class="relative py-20 mt-10 border-t border-navy/10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-2xl mx-auto px-6 text-center">
+    <h2 class="reveal font-display font-semibold tracking-tight text-[28px] md:text-[36px] text-navy leading-[1.05]">
+      Want this working inside <span class="font-serif italic font-normal text-blue">your</span> firm?
+    </h2>
+    <p class="reveal mt-5 text-ink/70 text-[16px] leading-relaxed max-w-lg mx-auto">
+      Start with an AI Opportunity Review. You'll come away with a prioritized roadmap of the automations worth building first, ranked by the hours and dollars each one gives back.
+    </p>
+    <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="reveal btn-gold inline-block mt-8 px-8 py-4 text-[15px]">Book your AI Opportunity Review</a>
+    <p class="reveal mt-4"><a href="/blog/" class="text-sm text-blue hover:text-navy transition font-medium">&larr; All posts</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-navy/10 py-10">
+  <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink/50">
+    <div class="flex items-center gap-3">
+      <span class="jt-badge w-7 h-7 pt-[4px]"><span class="jt text-[13px]">JT</span><span class="jt-ai text-[6px] ml-[1px]">AI</span></span>
+      <span class="font-display font-semibold text-navy">JamesTech</span>
+    </div>
+    <p>Mark Lucas &middot; JamesTech LLC &middot; Columbia, MD</p>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('active'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = Math.min(i % 5, 4) * 60 + 'ms';
+    io.observe(el);
+  });
+</script>
+</body>
+</html>
