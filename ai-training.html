@@ -89,6 +89,10 @@
     display: flex; flex-direction: column; overflow: hidden;
   }
   .card.brass-top { border-top-color: var(--brass); }
+  .card.team { grid-column: 1 / -1; }
+  .card.team .inner { display: grid; grid-template-columns: 1.4fr 1fr; gap: 8px 32px; align-items: start; }
+  .card.team .side { display: flex; flex-direction: column; }
+  @media (max-width: 720px) { .card.team .inner { grid-template-columns: 1fr; } }
   .card .photo { position: relative; }
   .card .photo img { aspect-ratio: 3/1.6; object-fit: cover; }
   .card .photo::after {
@@ -276,7 +280,7 @@
     </div>
   </div>
 
-  <div class="row-label">Two Ways In · Pick One</div>
+  <div class="row-label">Three Ways In · Pick One</div>
   <div class="doors">
 
     <div class="card">
@@ -294,7 +298,7 @@
         </ul>
         <div class="price">
           <div class="amt">$597 <small>in person</small> · $297 <small>virtual</small></div>
-          <div class="note"><strong>Founder pricing.</strong> Rises to $997 / $497 in the near future.</div>
+          <div class="note"><strong>Six seats per session.</strong> When a date fills, the next one opens.</div>
         </div>
         <a class="cardbtn" href="https://cal.com/jamestechai/ai-operating-system-training">Reserve Your In-Person Seat</a>
         <span class="altlink">Joining remotely? <a href="https://cal.com/jamestechai/ai-working-session-virtual">Book a virtual seat instead</a></span>
@@ -323,10 +327,34 @@
       </div>
     </div>
 
+    <div class="card team">
+      <div class="inner">
+        <div>
+          <div class="eyebrow">Option 3 <span class="tag">For Firms</span></div>
+          <h2>Bring Your Team</h2>
+          <p class="quote">"Your people. Your real work. No slide decks."</p>
+          <ul>
+            <li><strong>Four to six of your staff</strong>, at your office or live virtual</li>
+            <li><strong>One to three share their screen</strong> with a real problem from their week</li>
+            <li>We fix it live, and the room learns the tool on work they already know</li>
+            <li>Booked on your schedule, no class date to wait for</li>
+          </ul>
+        </div>
+        <div class="side">
+          <div class="price">
+            <div class="amt">Priced per team</div>
+            <div class="note">Scoped on a free planning call. Part of every engagement, or on its own.</div>
+          </div>
+          <a class="cardbtn ghost" href="https://cal.com/jamestechai/discovery-call">Plan Your Team Session</a>
+          <span class="smsconsent">Booking sends you a text confirmation and reminder from JamesTech, LLC. Message frequency varies, message and data rates may apply, and you can reply STOP to opt out at any time. See our <a href="/privacy.html">Privacy Policy</a>.</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <div class="leavewith">
-    <div class="lbl">What You Leave With · Both Options</div>
+    <div class="lbl">What You Leave With · Class or Private</div>
     <div class="items">
       <div class="item"><strong>Claude, installed</strong><span>Claude Desktop or Claude Code, set up and working on your machine</span></div>
       <div class="item"><strong>Your business, loaded</strong><span>Connected to your real documents so it answers like a teammate</span></div>
