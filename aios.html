@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meet James, Your AI Operating System | JamesTech</title>
+<meta name="description" content="James is the AI operator inside your business: 80 working skills, a perfect memory, and every action waiting on your approval. Installed on the tools you already own." />
+<link rel="canonical" href="https://jamestech.com/aios.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Meet James, Your AI Operating System | JamesTech" />
+<meta property="og:description" content="James is the AI operator inside your business: 80 working skills, a perfect memory, and every action waiting on your approval." />
+<meta property="og:url" content="https://jamestech.com/aios.html" />
+<meta property="og:image" content="https://jamestech.com/assets/jt-ai-icon-512.png" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/jt-ai-icon.png" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['Manrope', 'sans-serif'],
+          serif: ['"Instrument Serif"', 'serif'],
+          mono: ['"Space Grotesk"', 'monospace'],
+        },
+        colors: {
+          navy: '#0E2C6E',
+          blue: '#2A66D6',
+          blue2: '#1A48A6',
+          lblue: '#4D8DF0',
+          gold: '#FFC836',
+          gold2: '#FFB200',
+          ink: '#0E1726',
+          slate: '#5B6B86',
+          mist: '#F4F7FC',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root {
+    --bg: #FFFFFF;
+    --bg2: #F4F7FC;
+    --line: rgba(14,44,110,0.10);
+    --line2: rgba(14,44,110,0.18);
+    --blue: #2A66D6;
+    --navy: #0E2C6E;
+    --gold: #FFC836;
+    --gold2: #FFB200;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: #0E1726;
+    font-family: 'Manrope', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--gold); color: #0E2C6E; }
+
+  .jt-badge {
+    border-radius: 30%;
+    background: linear-gradient(135deg, #1A48A6, #0E2C6E);
+    display: inline-flex; align-items: flex-start; justify-content: center;
+    flex: none;
+  }
+  .jt-badge .jt {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    letter-spacing: -.04em; color: #fff; line-height: 1;
+  }
+  .jt-badge .jt-ai {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    letter-spacing: -.02em; color: #FFC836; line-height: 1;
+  }
+
+  .glass {
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 2px rgba(14,44,110,0.04), 0 18px 40px -28px rgba(14,44,110,0.30);
+  }
+  .soft-card {
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 2px rgba(14,44,110,0.03);
+    transition: background .4s, border-color .4s, transform .4s, box-shadow .4s;
+  }
+  .soft-card:hover {
+    border-color: var(--line2);
+    transform: translateY(-3px);
+    box-shadow: 0 1px 2px rgba(14,44,110,0.04), 0 22px 44px -28px rgba(14,44,110,0.32);
+  }
+
+  .aura { position:absolute; inset:0; pointer-events:none; }
+  .aura::before {
+    content:''; position:absolute; width:620px; height:620px; left:-180px; top:-220px;
+    background: radial-gradient(circle, rgba(42,102,214,0.12), transparent 60%);
+    filter: blur(40px);
+  }
+  .aura::after {
+    content:''; position:absolute; width:560px; height:560px; right:-160px; bottom:-200px;
+    background: radial-gradient(circle, rgba(255,200,54,0.14), transparent 60%);
+    filter: blur(50px);
+  }
+
+  .grid-bg {
+    position:absolute; inset:0; pointer-events:none; opacity:.6;
+    background:
+      linear-gradient(rgba(14,44,110,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14,44,110,0.05) 1px, transparent 1px);
+    background-size: 72px 72px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 0%, #000 35%, transparent 75%);
+            mask-image: radial-gradient(ellipse at 50% 0%, #000 35%, transparent 75%);
+  }
+
+  .mono-label {
+    font-family:'Space Grotesk', monospace; font-size:11px; font-weight:600;
+    text-transform:uppercase; letter-spacing:.24em; color: var(--blue);
+  }
+
+  .reveal { opacity:0; filter:blur(6px); transform:translateY(22px);
+    transition: all .9s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.active { opacity:1; filter:blur(0); transform:translateY(0); }
+
+  .btn-gold {
+    background: linear-gradient(180deg, var(--gold), var(--gold2));
+    color:#0E2C6E; font-weight:700;
+    border-radius:10px; transition: transform .25s, box-shadow .25s, filter .25s;
+    box-shadow: 0 10px 30px -8px rgba(255,178,0,0.55);
+  }
+  .btn-gold:hover { transform: translateY(-2px); filter: brightness(1.03);
+    box-shadow: 0 16px 40px -8px rgba(255,178,0,0.7); }
+  .btn-ghost {
+    border:1px solid var(--line2); color:#0E2C6E; border-radius:10px;
+    transition: background .25s, border-color .25s;
+  }
+  .btn-ghost:hover { background: rgba(42,102,214,0.06); border-color:var(--blue); }
+
+  .chip {
+    font-family:'Space Grotesk', monospace; font-size:10px; letter-spacing:.12em;
+    text-transform:uppercase; padding:3px 10px; border-radius:999px;
+    border:1px solid var(--line2); color:#5B6B86;
+  }
+
+  details { border-bottom:1px solid var(--line); }
+  details summary { list-style:none; cursor:pointer; }
+  details summary::-webkit-details-marker { display:none; }
+  details .plus { transition: transform .3s; color: var(--blue); }
+  details[open] .plus { transform: rotate(45deg); }
+
+  .wordmark { font-family:'Space Grotesk', sans-serif; font-weight:500; letter-spacing:.02em;
+    color: rgba(14,23,38,0.45); transition: color .3s; white-space:nowrap; }
+  .wordmark:hover { color: rgba(14,23,38,0.85); }
+
+  /* Stat strip */
+  .stat-num { font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:44px; line-height:1; color:var(--navy); }
+  .stat-num .accent { color: var(--blue); }
+  .stat-cap { font-family:'Space Grotesk', monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#5B6B86; margin-top:8px; }
+
+  /* Chat mock */
+  .chat-shell {
+    background: linear-gradient(160deg, #0E2C6E, #1A48A6);
+    border-radius: 18px; padding: 28px;
+    box-shadow: 0 24px 60px -32px rgba(14,44,110,.45);
+  }
+  .chat-bubble-you {
+    background: rgba(255,255,255,0.12); color:#fff;
+    border-radius: 14px 14px 4px 14px; padding: 12px 16px;
+    font-size: 14.5px; line-height: 1.5; max-width: 85%;
+    margin-left: auto;
+  }
+  .chat-bubble-james {
+    background: #fff; color: #0E1726;
+    border-radius: 14px 14px 14px 4px; padding: 12px 16px;
+    font-size: 14.5px; line-height: 1.5; max-width: 85%;
+  }
+  .chat-time { font-family:'Space Grotesk', monospace; font-size:10px; letter-spacing:.08em; color:#A9C0EE; margin-top:5px; }
+
+  /* Salary math table */
+  .role-row { display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:14px 0; border-bottom:1px solid var(--line); }
+  .role-row:last-child { border-bottom:none; }
+  .role-name { font-weight:600; font-size:15px; color:#0E1726; }
+  .role-desc { font-size:13px; color:#5B6B86; margin-top:2px; }
+  .role-salary { font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:17px; color:var(--navy); white-space:nowrap; }
+
+  /* Ladder cards */
+  .ladder-featured {
+    border: 2px solid var(--gold2);
+    box-shadow: 0 24px 60px -28px rgba(255,178,0,0.35), 0 1px 2px rgba(14,44,110,0.04);
+  }
+  .inc { display:flex; gap:10px; align-items:flex-start; font-size:14px; color:rgba(14,23,38,0.75); line-height:1.5; }
+  .inc svg { flex:none; margin-top:3px; }
+  .exc { display:flex; gap:10px; align-items:flex-start; font-size:14px; color:rgba(14,23,38,0.45); line-height:1.5; }
+  .exc svg { flex:none; margin-top:3px; }
+</style>
+</head>
+<body class="font-body antialiased">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mt-4 glass rounded-xl flex items-center justify-between px-5 py-3">
+      <a href="/" class="flex items-center gap-3">
+        <span class="jt-badge w-9 h-9 pt-[5px]"><span class="jt text-[17px]">JT</span><span class="jt-ai text-[8px] ml-[2px] mt-[1px]">AI</span></span>
+        <span class="flex flex-col leading-none">
+          <span class="font-display font-bold text-navy text-[15px] tracking-tight">JamesTech</span>
+          <span class="font-body text-[9px] tracking-[0.16em] uppercase text-slate mt-[3px]">Since 2001</span>
+        </span>
+      </a>
+      <div class="flex items-center gap-5">
+        <a href="/" class="hidden sm:inline text-sm font-medium text-ink/70 hover:text-navy transition">The Review</a>
+        <a href="/case-study.html" class="hidden sm:inline text-sm font-medium text-ink/70 hover:text-navy transition">Case study</a>
+        <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="btn-gold text-sm px-4 py-2">Book the Review</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative pt-40 pb-20 overflow-hidden">
+  <div class="aura"></div>
+  <div class="grid-bg"></div>
+  <div class="relative max-w-6xl mx-auto px-6">
+    <div class="reveal">
+      <span class="mono-label">The AI Operating System &middot; installed and run by JamesTech</span>
+    </div>
+    <h1 class="reveal mt-6 font-display font-semibold tracking-tighter leading-[0.98] text-[40px] sm:text-[58px] md:text-[68px] max-w-4xl text-navy">
+      Meet James. The operator your business <span class="font-serif italic font-normal text-blue">has been missing</span>.
+    </h1>
+    <p class="reveal mt-6 font-serif italic text-[19px] md:text-[23px] leading-snug text-blue/90 max-w-3xl">It has all the knowledge you have, but it has a perfect memory and it never sleeps.</p>
+    <p class="reveal mt-7 text-[17px] md:text-[19px] leading-relaxed text-ink/70 max-w-2xl">
+      James is an AI operating system I install inside the tools you already pay for. It learns your business, watches your live numbers, briefs you every morning, and drafts the work that used to wait on you. You approve. James executes.
+    </p>
+    <div class="reveal mt-9 flex flex-col sm:flex-row sm:items-center gap-4">
+      <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="btn-gold px-7 py-3.5 text-[15px]">Start with the Review</a>
+      <a href="#ladder" class="btn-ghost px-7 py-3.5 text-[15px] text-center">See the three rungs</a>
+    </div>
+    <p class="reveal mt-4 text-[13px] text-ink/45 max-w-xl leading-snug">
+      Booking sends you a text confirmation and reminder from JamesTech, LLC. Message frequency varies, message and data rates may apply, and you can reply STOP to opt out at any time. See our <a href="/privacy.html" class="underline hover:text-navy">Privacy Policy</a>.
+    </p>
+
+    <!-- STAT STRIP -->
+    <div class="reveal mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl">
+      <div>
+        <div class="stat-num">80<span class="accent">+</span></div>
+        <div class="stat-cap">working skills in the system I run daily</div>
+      </div>
+      <div>
+        <div class="stat-num">5</div>
+        <div class="stat-cap">layers: context, data, intelligence, automation, build</div>
+      </div>
+      <div>
+        <div class="stat-num">100<span class="accent">%</span></div>
+        <div class="stat-cap">of your data stays in your own tenant and accounts</div>
+      </div>
+      <div>
+        <div class="stat-num">0</div>
+        <div class="stat-cap">actions taken without your approval</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BANNER -->
+<section class="relative py-12 border-y border-navy/10">
+  <div class="max-w-6xl mx-auto px-6">
+    <p class="reveal text-center mono-label !text-slate mb-7">Three decades delivering across</p>
+    <div class="reveal flex flex-wrap items-center justify-center gap-x-10 gap-y-5 text-lg md:text-xl">
+      <span class="wordmark">Microsoft</span>
+      <span class="wordmark">NASA</span>
+      <span class="wordmark">T. Rowe Price</span>
+      <span class="wordmark">Booz Allen Hamilton</span>
+      <span class="wordmark">Northrop Grumman</span>
+      <span class="wordmark">BAE Systems</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1 — THE TEAMMATE TEST -->
+<section class="relative py-28 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-4xl mx-auto px-6 text-center">
+    <span class="reveal block mono-label">The teammate test</span>
+    <h2 class="reveal mt-5 font-display font-semibold tracking-tight text-[32px] md:text-[44px] leading-[1.05] text-navy">
+      Ask any AI a question about <span class="font-serif italic font-normal text-blue">your</span> business.
+    </h2>
+    <div class="reveal mt-7 text-ink/70 text-[17px] leading-relaxed space-y-5">
+      <p>Does it answer like a teammate, or like a stranger who met you five seconds ago? An AIOS is the difference.</p>
+      <p>ChatGPT forgets you when you close the tab. James knows your clients, your numbers, your open deals, your writing voice, and what you agreed to in that meeting back in March. Every conversation starts from full context, because the context lives in your system and never leaves it.</p>
+    </div>
+    <p class="reveal mt-8 inline-block glass rounded-xl px-6 py-4 text-sm text-ink/75">
+      <span class="text-blue font-semibold">Try it on the discovery call:</span> ask my system a question about my business, then ask your AI the same question about yours.
+    </p>
+  </div>
+</section>
+
+<!-- SECTION 2 — WHAT GETS INSTALLED -->
+<section class="relative py-28 border-t border-navy/10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-6xl mx-auto px-6">
+    <div class="max-w-2xl">
+      <span class="reveal block mono-label">What gets installed</span>
+      <h2 class="reveal mt-5 font-display font-semibold tracking-tight text-[32px] md:text-[44px] leading-[1.05] text-navy">
+        Five layers, built on the stack you <span class="font-serif italic font-normal text-blue">already</span> own.
+      </h2>
+      <p class="reveal mt-5 text-ink/65 text-[16px] leading-relaxed">
+        No new platform to learn and nothing to rip out. James sits on top of Microsoft 365, your accounting system, your CRM, and your calendar, and connects what they never say to each other.
+      </p>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="reveal soft-card rounded-2xl p-7">
+        <span class="mono-label !text-slate">Layer 01</span>
+        <h3 class="mt-4 font-display font-semibold text-xl text-navy">It knows the business</h3>
+        <p class="mt-3 text-ink/65 text-[15px] leading-relaxed">Your strategy, clients, team, offers, and history, captured once and remembered permanently. New context compounds instead of evaporating.</p>
+      </div>
+      <div class="reveal soft-card rounded-2xl p-7">
+        <span class="mono-label !text-slate">Layer 02</span>
+        <h3 class="mt-4 font-display font-semibold text-xl text-navy">It sees your numbers</h3>
+        <p class="mt-3 text-ink/65 text-[15px] leading-relaxed">Collectors pull from your real sources daily: invoices, receivables, P&amp;L, pipeline, time. No more asking three people for one answer.</p>
+      </div>
+      <div class="reveal soft-card rounded-2xl p-7">
+        <span class="mono-label !text-slate">Layer 03</span>
+        <h3 class="mt-4 font-display font-semibold text-xl text-navy">It briefs you daily</h3>
+        <p class="mt-3 text-ink/65 text-[15px] leading-relaxed">Every morning: what's urgent, what's overdue, what's stale, and what moved. Meetings get debriefed into decisions and follow-ups automatically.</p>
+      </div>
+      <div class="reveal soft-card rounded-2xl p-7">
+        <span class="mono-label !text-slate">Layer 04</span>
+        <h3 class="mt-4 font-display font-semibold text-xl text-navy">It does the work</h3>
+        <p class="mt-3 text-ink/65 text-[15px] leading-relaxed">Status reports, proposals, follow-up drafts, meeting prep, invoice chasing, content. Drafted in your voice, queued for your approval.</p>
+      </div>
+      <div class="reveal soft-card rounded-2xl p-7">
+        <span class="mono-label !text-slate">Layer 05</span>
+        <h3 class="mt-4 font-display font-semibold text-xl text-navy">It frees your bandwidth</h3>
+        <p class="mt-3 text-ink/65 text-[15px] leading-relaxed">We audit your recurring tasks, score each one, and automate them away one by one. The hours come back to growth, or to your life.</p>
+      </div>
+      <div class="reveal soft-card rounded-2xl p-7 bg-mist">
+        <span class="mono-label !text-slate">The library</span>
+        <h3 class="mt-4 font-display font-semibold text-xl text-navy">80+ working skills</h3>
+        <p class="mt-3 text-ink/65 text-[15px] leading-relaxed">One word triggers a complete workflow: morning brief, meeting prep, weekly review, status report, proposal draft. Your install ships with the ones your business needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 — A DAY WITH JAMES (chat mock) -->
+<section class="relative py-28 border-t border-navy/10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+    <div class="reveal">
+      <span class="mono-label">A day with James</span>
+      <h2 class="mt-5 font-display font-semibold tracking-tight text-[30px] md:text-[40px] leading-[1.08] text-navy">
+        From your desk, or from your <span class="font-serif italic font-normal text-blue">phone</span>.
+      </h2>
+      <div class="mt-6 space-y-5 text-ink/70 text-[16px] leading-relaxed">
+        <p>James lives on your machine and in your pocket. Text it from the sideline of your kid's game and the work is drafted before you're home.</p>
+        <p>Notice what it doesn't do: it doesn't send. Anything that touches a client or a dollar waits for you. That's not a limitation. That's the design.</p>
+      </div>
+      <div class="mt-7 space-y-3">
+        <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>Morning brief with your real numbers, urgent items, and calendar</span></div>
+        <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>Meeting transcripts turned into decisions, commitments, and next actions</span></div>
+        <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>Client emails and reports drafted in your voice, waiting in your drafts folder</span></div>
+        <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>Answers with receipts: "What did we agree to with that client in March?"</span></div>
+      </div>
+    </div>
+    <div class="reveal chat-shell">
+      <div class="flex items-center gap-3 pb-4 mb-4 border-b border-white/15">
+        <span class="jt-badge w-8 h-8 pt-[4px]"><span class="jt text-[14px]">J</span></span>
+        <div>
+          <p class="text-white font-semibold text-sm leading-none">James</p>
+          <p class="text-[11px] text-white/50 mt-1">online</p>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <div class="chat-bubble-you">The WTB invoice went out? And what's on deck before my 2 o'clock?</div>
+          <div class="chat-time text-right">7:42 AM</div>
+        </div>
+        <div>
+          <div class="chat-bubble-james">Invoice went out on the 1st, on their usual cycle. Before your 2:00 kickoff: the prep brief is ready (attendees, history, three talking points), and the July numbers you'll want are in it. One flag: the proposal follow-up to MCCC is now 8 days old. Draft reply is in your Outlook drafts.</div>
+          <div class="chat-time">7:42 AM</div>
+        </div>
+        <div>
+          <div class="chat-bubble-you">Good. Send me the brief.</div>
+          <div class="chat-time text-right">7:44 AM</div>
+        </div>
+        <div>
+          <div class="chat-bubble-james">Sent. And your Friday review is two weeks overdue. Want me to hold 30 minutes tomorrow at 8:30?</div>
+          <div class="chat-time">7:44 AM</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 — GOVERNANCE -->
+<section class="relative py-28 border-t border-navy/10 bg-mist overflow-hidden">
+  <div class="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-start">
+    <div class="reveal">
+      <span class="mono-label">Governance first</span>
+      <h2 class="mt-5 font-display font-semibold tracking-tight text-[30px] md:text-[40px] leading-[1.08] text-navy">
+        An AI with initiative needs <span class="font-serif italic font-normal text-blue">rules</span>. Yours comes with them.
+      </h2>
+      <div class="mt-6 space-y-5 text-ink/70 text-[16px] leading-relaxed">
+        <p>You've heard the horror stories about AI going rogue on customers. I've spent 30 years in environments where mistakes are expensive: NASA, the DOJ, NATO, regulated finance. Guardrails aren't an afterthought here. They're the first thing installed.</p>
+        <p class="text-ink/90">James drafts. You send. Every outbound email, invoice, and message waits in a drafts folder for your eyes. Your data stays in your own tenant and your own accounts, under your existing security and compliance controls. Nothing lives on my servers.</p>
+      </div>
+    </div>
+    <div class="reveal glass rounded-2xl p-7">
+      <p class="mono-label !text-slate mb-5">The standing rules, in plain English</p>
+      <div class="space-y-4">
+        <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span><span class="font-semibold text-ink">Outbound is draft-only.</span> Emails, invoices, and client messages are prepared, never sent. You press send.</span></div>
+        <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span><span class="font-semibold text-ink">Your tenant, your keys.</span> James works through your own Microsoft 365, accounting, and CRM accounts, inside permissions you control.</span></div>
+        <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span><span class="font-semibold text-ink">Everything leaves a trail.</span> What was done, when, and from what source. Built for environments with auditors.</span></div>
+        <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span><span class="font-semibold text-ink">Compliance flags up front.</span> Data, access, and regulatory constraints get mapped before anything is automated, not after.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 — THE MATH -->
+<section class="relative py-28 border-t border-navy/10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-6xl mx-auto px-6">
+    <div class="max-w-2xl">
+      <span class="reveal block mono-label">The math</span>
+      <h2 class="reveal mt-5 font-display font-semibold tracking-tight text-[32px] md:text-[44px] leading-[1.05] text-navy">
+        What would this cost as <span class="font-serif italic font-normal text-blue">headcount</span>?
+      </h2>
+      <p class="reveal mt-5 text-ink/65 text-[16px] leading-relaxed">
+        The work James takes on maps to roles you'd otherwise hire for. Typical U.S. salaries for each, before benefits and management overhead.
+      </p>
+    </div>
+
+    <div class="reveal mt-12 grid md:grid-cols-5 gap-8 items-start">
+      <div class="glass rounded-2xl p-7 md:col-span-3">
+        <div class="role-row">
+          <div>
+            <div class="role-name">Executive assistant</div>
+            <div class="role-desc">Morning briefings, inbox triage, meeting prep, follow-up tracking</div>
+          </div>
+          <div class="role-salary">$75,000/yr</div>
+        </div>
+        <div class="role-row">
+          <div>
+            <div class="role-name">Operations coordinator</div>
+            <div class="role-desc">Status reports, task tracking, invoice chasing, nothing dropped</div>
+          </div>
+          <div class="role-salary">$68,000/yr</div>
+        </div>
+        <div class="role-row">
+          <div>
+            <div class="role-name">Business analyst</div>
+            <div class="role-desc">Live dashboards, monthly numbers, research and vendor evaluation</div>
+          </div>
+          <div class="role-salary">$72,000/yr</div>
+        </div>
+        <div class="role-row">
+          <div>
+            <div class="role-name">Content and communications</div>
+            <div class="role-desc">Client emails, proposals, and posts drafted in your voice</div>
+          </div>
+          <div class="role-salary">$62,000/yr</div>
+        </div>
+      </div>
+      <div class="md:col-span-2">
+        <div class="reveal glass rounded-2xl p-7 text-center">
+          <p class="mono-label !text-slate">Combined salary equivalent</p>
+          <p class="font-display font-bold text-[44px] text-navy mt-3">$277,000<span class="text-[20px] text-slate">/yr</span></p>
+          <div class="my-5" style="height:1px;background:var(--line)"></div>
+          <p class="mono-label !text-slate">Your install</p>
+          <p class="font-display font-bold text-[34px] text-blue mt-2">from $5,000<span class="text-[16px] text-slate"> once</span></p>
+          <p class="text-[13px] text-ink/55 mt-4 leading-snug">Salary figures are typical U.S. ranges for illustration, not a quote. Your actual roadmap comes from the Review, priced against your own workflows.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 — THE LADDER -->
+<section id="ladder" class="relative py-28 border-t border-navy/10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="reveal block mono-label">How you buy it</span>
+      <h2 class="reveal mt-5 font-display font-semibold tracking-tight text-[32px] md:text-[44px] leading-[1.05] text-navy">
+        Three rungs. Each one <span class="font-serif italic font-normal text-blue">earns</span> the next.
+      </h2>
+      <p class="reveal mt-6 text-ink/70 text-[16px] leading-relaxed">
+        Nobody starts with a retainer. You start with a Review that pays for itself, and every rung credits or builds on the one before it.
+      </p>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-3 gap-6 items-stretch">
+      <!-- Rung 1: Review -->
+      <div class="reveal soft-card rounded-2xl p-7 flex flex-col">
+        <span class="mono-label !text-slate">Rung 01 &middot; Start here</span>
+        <h3 class="mt-4 font-display font-semibold text-2xl text-navy">AI Opportunity Review</h3>
+        <p class="mt-2 font-display font-bold text-[28px] text-ink">from $2,500</p>
+        <p class="text-[13px] text-slate">scoped to your team &middot; credited in full toward your install</p>
+        <div class="mt-6 space-y-3 flex-1">
+          <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>Working sessions with the people who do the work</span></div>
+          <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>Your Prioritized AI Opportunity Roadmap, yours to keep</span></div>
+          <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>At least 3 quantified opportunities or you don't pay</span></div>
+        </div>
+        <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="btn-ghost text-center mt-7 px-5 py-3 text-sm font-semibold">Book the Review</a>
+      </div>
+
+      <!-- Rung 2: Install (featured) -->
+      <div class="reveal soft-card ladder-featured rounded-2xl p-7 flex flex-col relative">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 chip !bg-white" style="background:#fff; border-color:var(--gold2); color:var(--navy); font-weight:700;">The flagship</span>
+        <span class="mono-label !text-slate">Rung 02</span>
+        <h3 class="mt-4 font-display font-semibold text-2xl text-navy">AIOS Install</h3>
+        <p class="mt-2 font-display font-bold text-[28px] text-ink">from $5,000</p>
+        <p class="text-[13px] text-slate">fixed-scope starter installs $5,000 to $7,500 &middot; full first seat $10,000 &middot; additional seats $2,500</p>
+        <div class="mt-6 space-y-3 flex-1">
+          <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>All five layers, built on your existing stack</span></div>
+          <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>James trained on your business: context, voice, clients, numbers</span></div>
+          <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>Daily brief, meeting debriefs, and your first automations live</span></div>
+          <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>Governance rules installed from day one</span></div>
+          <div class="exc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9AA8C2" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg><span>New automations shipped monthly: that's the retainer</span></div>
+          <div class="exc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9AA8C2" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Ongoing AI roadmap ownership: that's the retainer too</span></div>
+        </div>
+        <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="btn-gold text-center mt-7 px-5 py-3 text-sm">Scope your install</a>
+      </div>
+
+      <!-- Rung 3: Retainer -->
+      <div class="reveal soft-card rounded-2xl p-7 flex flex-col">
+        <span class="mono-label !text-slate">Rung 03 &middot; Where clients stay</span>
+        <h3 class="mt-4 font-display font-semibold text-2xl text-navy">Fractional AI Officer</h3>
+        <p class="mt-2 font-display font-bold text-[28px] text-ink"><span class="text-[16px] text-slate">From </span>$3,700<span class="text-[16px] text-slate">/mo</span></p>
+        <div class="mt-6 space-y-3 flex-1">
+          <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>1 to 2 new automations or AI recipes shipped every month</span></div>
+          <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>Everything built stays monitored and maintained</span></div>
+          <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>Monthly team training and a plain-English status report</span></div>
+          <div class="inc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A66D6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>I own your AI roadmap and report ROI to leadership quarterly</span></div>
+        </div>
+        <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="btn-ghost text-center mt-7 px-5 py-3 text-sm font-semibold">Talk retainers</a>
+      </div>
+    </div>
+
+    <p class="reveal mt-8 text-center text-sm text-ink/55 max-w-2xl mx-auto">
+      A senior AI lead without the full-time hire. Every engagement is scoped in modules, so it grows by adding pieces you can point to, never by surprise hours.
+    </p>
+  </div>
+</section>
+
+<!-- SECTION 7 — WHO BUILT THIS -->
+<section class="relative py-28 border-t border-navy/10 bg-mist overflow-hidden">
+  <div class="relative max-w-4xl mx-auto px-6 text-center">
+    <span class="reveal block mono-label">Who built this</span>
+    <h2 class="reveal mt-5 font-display font-semibold tracking-tight text-[30px] md:text-[40px] leading-[1.08] text-navy">
+      I run this exact system on my own business, <span class="font-serif italic font-normal text-blue">every day</span>.
+    </h2>
+    <div class="reveal mt-7 text-ink/70 text-[16px] leading-relaxed space-y-5 max-w-2xl mx-auto">
+      <p>The daily brief that opens my morning, the meeting debriefs, the drafted client emails, the live revenue numbers: all of it comes from the same system I install for clients. I'm not selling you a theory. I'm handing you the operating layer I depend on.</p>
+      <p>Behind it: 30 years in the Microsoft ecosystem, three of them as a Microsoft employee, and delivery for organizations that cannot afford mistakes, including NASA's Artemis program and T. Rowe Price. JamesTech has been in business since 2001. The agent is named James for a reason.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8 — RECEIPTS -->
+<section id="receipts" class="relative py-28 border-t border-navy/10 overflow-hidden">
+  <div class="aura"></div>
+  <div class="relative max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="reveal block mono-label">Receipts</span>
+      <h2 class="reveal mt-5 font-display font-semibold tracking-tight text-[32px] md:text-[44px] leading-[1.05] text-navy">
+        Receipts, <span class="font-serif italic font-normal text-blue">not</span> pitch decks.
+      </h2>
+    </div>
+    <div class="reveal mt-12">
+      <script src="https://widget.senja.io/widget/0a846478-ac7f-4e53-97af-ddd410a690f4/platform.js" type="text/javascript" async></script>
+      <div class="senja-embed" data-id="0a846478-ac7f-4e53-97af-ddd410a690f4" data-mode="shadow" data-lazyload="false" style="display: block; width: 100%;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9 — FAQ -->
+<section class="relative py-24 border-t border-navy/10">
+  <div class="relative max-w-3xl mx-auto px-6">
+    <span class="reveal block mono-label text-center">Questions</span>
+    <h2 class="reveal mt-5 mb-10 text-center font-display font-semibold tracking-tight text-[30px] md:text-[40px] text-navy">
+      The honest answers.
+    </h2>
+    <div class="reveal">
+      <details open>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink">What exactly is a "skill"?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">A repeatable workflow James executes on one instruction: build my morning brief, prep me for this meeting, draft the weekly status report, process this transcript into action items. My own system runs more than 80 of them. Your install ships with the ones mapped to your business in the Review, and new ones get added as we find the work.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink">Where does our data live?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">In your own tenant and your own accounts, under permissions you control. James works through the Microsoft 365, accounting, and CRM subscriptions you already hold. Nothing is uploaded to my servers. For regulated environments, we map your data and compliance constraints before anything is built.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink">Can it send an email or an invoice without us knowing?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">No. Outbound is draft-only by standing rule. James prepares the email, the report, or the invoice and parks it for your approval. You are the signature on everything that leaves the building.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink">Do we have to be on Microsoft?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">It's where I add the most value and where most of my clients already are, but the system connects to accounting, CRM, calendar, and communication tools broadly. If you're partly on Microsoft, we'll still find the wins.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink">What happens when the big AI companies build this themselves?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">The tools underneath will keep improving, and your system improves with them. What you're buying from me is the part that doesn't commoditize: your business context, your governance rules, your workflows mapped and automated, and a senior advisor who is accountable for the roadmap. When a better engine ships, we swap it in and you get faster.</p>
+      </details>
+      <details>
+        <summary class="flex items-center justify-between py-5">
+          <span class="font-semibold text-[17px] text-ink">Who is this for?</span>
+          <span class="plus text-2xl leading-none">+</span>
+        </summary>
+        <p class="pb-6 text-ink/65 leading-relaxed">Owner-led professional services firms, roughly 10 to 50 people, where the owner is the bottleneck and the data can't leave the building. If that's you, the Review is the right first step. If you're a solo operator who wants to build this yourself, I'm probably not your vendor, and I'll tell you that on the call.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="book" class="relative py-32 overflow-hidden">
+  <div class="aura"></div>
+  <div class="grid-bg"></div>
+  <div class="relative max-w-3xl mx-auto px-6 text-center">
+    <h2 class="reveal font-display font-semibold tracking-tighter text-[34px] md:text-[52px] leading-[1.02] text-navy">
+      Your business already has the tools. Now give it an <span class="font-serif italic font-normal text-blue">operator</span>.
+    </h2>
+    <p class="reveal mt-6 text-ink/70 text-[17px] leading-relaxed max-w-xl mx-auto">
+      The ladder starts with the Review: a working session that maps where James earns his keep in your firm, guaranteed to surface at least three quantified opportunities.
+    </p>
+    <a href="https://cal.com/jamestechai/discovery-call" target="_blank" rel="noopener" class="reveal btn-gold inline-block mt-10 px-9 py-4 text-base">Book your AI Opportunity Review</a>
+    <p class="reveal mt-3 text-sm text-ink/45">From $2,500, credited in full toward your install.</p>
+    <p class="reveal mt-4 text-[13px] text-ink/45 max-w-xl mx-auto leading-snug">
+      Booking sends you a text confirmation and reminder from JamesTech, LLC. Message frequency varies, message and data rates may apply, and you can reply STOP to opt out at any time. See our <a href="/privacy.html" class="underline hover:text-navy">Privacy Policy</a>.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-navy/10 py-10">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink/50">
+    <div class="flex items-center gap-3">
+      <span class="jt-badge w-7 h-7 pt-[4px]"><span class="jt text-[13px]">JT</span><span class="jt-ai text-[6px] ml-[1px]">AI</span></span>
+      <span class="font-display font-semibold text-navy">JamesTech</span>
+      <span class="mono-label !text-slate ml-2">Cut through the AI hype</span>
+    </div>
+    <div class="flex flex-col sm:items-end gap-1">
+      <div class="flex items-center gap-4">
+        <a href="/" class="hover:text-navy transition">The Review</a>
+        <a href="/case-study.html" class="hover:text-navy transition">Case study</a>
+        <a href="/privacy.html" class="hover:text-navy transition">Privacy</a>
+        <a href="/terms.html" class="hover:text-navy transition">Terms &amp; Messaging</a>
+        <a href="mailto:info@jamestech.com" class="hover:text-navy transition">Contact</a>
+      </div>
+      <p>JamesTech LLC &middot; Columbia, MD</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('active'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = Math.min(i % 6, 5) * 60 + 'ms';
+    io.observe(el);
+  });
+</script>
+</body>
+</html>
